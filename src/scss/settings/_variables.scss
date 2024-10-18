@@ -1,0 +1,54 @@
+/* Breakpoints */
+$xs: 480;
+$sm: 600;
+$md: 900;
+$lg: 1200;
+$xl: 1400;
+
+:root {
+	/* Fonts */
+	--font-family-primary-regular: "Archivo-Regular";
+	--font-family-primary-medium: "Archivo-Medium";
+	--font-family-primary-semiBold: "Archivo-SemiBold";
+	--font-family-primary-bold: "Archivo-Bold";
+	--font-family-primary-extraBold: "Archivo-ExtraBold";
+	
+	/* Headings */
+	--font-heading-h1: 700 64rem / 110% var(--font-family-primary-bold);
+	--font-heading-h2: 700 48rem / 110% var(--font-family-primary-bold);
+	--font-heading-h3: 700 32rem / 110% var(--font-family-primary-bold);
+	--font-heading-h4: 700 26rem / 110% var(--font-family-primary-bold);
+	
+	/* Body */
+	--font-body-l-medium: 500 24rem / 115% var(--font-family-primary-medium);
+	--font-body-l-regular: 400 24rem / 140% var(--font-family-primary-regular);
+	
+	--font-body-m-regular: 400 18rem / 145% var(--font-family-primary-regular);
+	--font-body-m-semiBold: 600 18rem / 150% var(--font-family-primary-regular);
+	
+	--font-body-s-medium: 500 16rem / 135% var(--font-family-primary-regular);
+	
+	--font-body-xs-regular: 400 14rem / 140% var(--font-family-primary-regular);
+	
+	/* Buttons */
+	--font-button: 600 18rem / 135% var(--font-family-primary-semiBold);
+	--font-link: 500 18rem / 135% var(--font-family-primary-medium);
+	
+	/* Colors */
+	--color-primary:                                  #003A78;
+	--color-secondary:                                #135AA7;
+	--color-primary-light:                            #5394DA;
+	--color-black:                                    #0B1720;
+	--color-gray-1:                                   #1E2730;
+	--color-gray-2:                                   #4A4E56;
+	--color-gray-3:                                   #848A90;
+	--color-gray-4:                                   #989EA5;
+	--color-gray-5:                                   #D1D8DE;
+	--color-gray-6:                                   #F1F1F3;
+	--color-gray-7:                                   #F6F6F9;
+	--color-white:                                    #FFFFFF;
+	
+	/* Transition */
+	--duration:                            .2s;
+	--ease:                                ease;
+}

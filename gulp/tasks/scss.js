@@ -23,6 +23,8 @@ export const scss = () => {
       postcss([tailwindcss('./tailwind.config.cjs'), autoprefixer()]),
     )
     .pipe(groupCssMediaQueries())
+    .pipe(cleanCss())
+    .pipe(rename({ extname: ".min.css" }))
     .pipe(app.gulp.dest(app.path.build.css))
     .pipe(app.plugins.browsersync.stream())
 }

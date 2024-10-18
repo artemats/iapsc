@@ -1,0 +1,16 @@
+@use "../settings/mixins";
+@use "../settings/variables";
+
+.link{
+	color: var(--color-gray-1);
+	font: var(--font-link);
+	cursor: default;
+	transition: color var(--duration) var(--ease);
+	
+		@include mixins.hover(variables.$md){
+			&:hover{
+				cursor: pointer;
+				color: var(--color-secondary);
+			}
+		}
+}

@@ -1,0 +1,33 @@
+@use "../settings/mixins";
+
+.hero{
+	text-align: center;
+	padding: 96rem 0;
+	
+		&-box{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 24rem;
+			
+				h1{
+					text-transform: capitalize;
+				}
+			
+				.btn{
+					margin-top: 24rem;
+				}
+		}
+	
+		&-banner{
+			border-radius: 32px;
+			overflow: hidden;
+			height: 755rem;
+			margin-top: 63rem;
+			
+				img{
+					@include mixins.imageCover(center);
+				}
+		}
+}

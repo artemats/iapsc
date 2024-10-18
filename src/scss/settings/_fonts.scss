@@ -1,0 +1,7 @@
+@use "mixins";
+
+@include mixins.font("Archivo-ExtraBold", "Archivo-ExtraBold", "800", "normal");
+@include mixins.font("Archivo-Bold", "Archivo-Bold", "700", "normal");
+@include mixins.font("Archivo-SemiBold", "Archivo-SemiBold", "600", "normal");
+@include mixins.font("Archivo-Medium", "Archivo-Medium", "500", "normal");
+@include mixins.font("Archivo-Regular", "Archivo-Regular", "400", "normal");

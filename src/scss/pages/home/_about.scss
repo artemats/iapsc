@@ -1,0 +1,48 @@
+@use "../../settings/mixins";
+
+.home-about{
+	padding: 96rem 0;
+	
+		.section{
+				&-title{
+					max-width: 500rem;
+				}
+				&-description{
+				
+				}
+		}
+	
+		.banner{
+			height: 364rem;
+			margin-top: 64rem;
+				
+				img{
+					@include mixins.imageCover(center);
+				}
+		}
+}
+
+.about{
+		&-card{
+			margin-top: 64rem;
+			border-radius: 32px;
+			background-color: var(--color-secondary);
+			height: 364rem;
+			color: var(--color-white);
+			padding: 24rem;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: space-between;
+			
+			&-title{
+				font-size: 96rem;
+				font-family: var(--font-family-primary-extraBold);
+				line-height: 1.11em;
+			}
+			
+			&-description{
+				font: var(--font-body-l-regular);
+			}
+		}
+}

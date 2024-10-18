@@ -1,0 +1,47 @@
+.container{
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	padding: 0 48rem;
+	
+		@media (min-width: 1200px) {
+			max-width: 100%;
+		}
+		@media (min-width: 992px) {
+			max-width: 100%;
+		}
+		@media (min-width: 768px) {
+			max-width: 100%;
+		}
+		@media (min-width: 576px) {
+			max-width: 100%;
+		}
+}
+
+.alert{
+	font: var(--font-body-xs-regular);
+	color: var(--color-white);
+	background-color: var(--color-primary);
+	padding: 8rem 0;
+	text-align: center;
+	
+		p{
+			font-size: inherit;
+		}
+}
+
+.banner{
+	border-radius: 32rem;
+	overflow: hidden;
+}
+
+.section{
+	
+		&-description{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			gap: 26rem;
+		}
+}

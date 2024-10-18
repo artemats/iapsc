@@ -1,0 +1,111 @@
+@use '../settings/mixins';
+@use "../settings/variables";
+
+.btn{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font: var(--font-button);
+	text-decoration: none;
+	border: 2rem var(--color-primary) solid;
+	background-color: var(--color-primary);
+	padding: 0 14rem;
+	height: 40rem;
+	line-height: 38rem;
+	color: var(--color-white);
+	border-radius: 4rem;
+	gap: 8rem;
+	cursor: default;
+	transition: background-color var(--duration) var(--ease), color var(--duration) var(--ease), border-color var(--duration) var(--ease);
+	white-space: nowrap;
+	
+		@include mixins.hover(variables.$md){
+			&:hover{
+				cursor: pointer;
+				background-color: var(--color-secondary);
+				border-color: var(--color-secondary);
+			}
+		}
+	
+		&.disabled,
+		&[disabled]{
+			background-color: var(--color-gray-3);
+			border-color: var(--color-gray-3);
+			pointer-events: none;
+		}
+	
+		// sizes
+		&-lg{
+			height: 56rem;
+			line-height: 54rem;
+			padding: 0 30rem;
+		}
+	
+		// variants
+		&-outline{
+			background-color: transparent;
+			color: var(--color-primary);
+			
+				@include mixins.hover(variables.$md){
+					&:hover{
+						cursor: pointer;
+						color: var(--color-secondary);
+						background-color: transparent;
+						border-color: var(--color-secondary);
+					}
+				}
+			
+				&.disabled,
+				&[disabled]{
+					background-color: transparent;
+					border-color: var(--color-gray-3);
+					color: var(--color-gray-3);
+					pointer-events: none;
+				}
+		}
+	
+		&-link{
+			padding: 0;
+			background-color: transparent;
+			color: var(--color-primary);
+			line-height: 24rem;
+			height: auto;
+			border: none;
+			
+				@include mixins.hover(variables.$md){
+					&:hover{
+						cursor: pointer;
+						color: var(--color-secondary);
+						background-color: transparent;
+					}
+				}
+			
+				&.disabled,
+				&[disabled]{
+					color: var(--color-gray-3);
+					background-color: transparent;
+					pointer-events: none;
+				}
+		}
+	
+		&-label{
+			position: relative;
+			display: inline-block;
+		}
+	
+		&-icon{
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 24rem;
+			height: 24rem;
+			position: relative;
+			color: currentColor;
+			
+				svg{
+					width: 100%;
+					height: 100%;
+				}
+		}
+}

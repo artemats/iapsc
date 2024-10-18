@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>gulp 2023</title>
-</head>
+@@include('html/components/head.html', { title: "International Association of Professional Security Consultants" })
 <body>
-<!--@@include('html/header.html', {})-->
 <main>
-  <div class="w-screen h-screen bg-black flex justify-center items-center">
-    <h1 class="font-bold text-white text-3xl  lg:text-5xl">
-      Welcome to Presto team
-    </h1>
-  </div>
+	@@include('html/components/header.html', {})
+	@@include('html/pages/home/hero.html', {})
+	@@include('html/pages/home/about.html', {})
+	@@include('html/pages/home/services.html', {})
+	@@include('html/pages/home/events.html', {})
+	@@include('html/pages/home/news.html', {})
 </main>
 <!--@@include('html/footer.html', {})-->
-<script src="js/app.min.js"></script>
+@@include('html/components/scripts.html')
 </body>
 </html>

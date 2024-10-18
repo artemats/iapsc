@@ -1,0 +1,35 @@
+@use "../settings/mixins";
+
+.event{
+		&-thumb{
+			height: 432rem;
+			overflow: hidden;
+			border-radius: 8px;
+			
+				img{
+					@include mixins.imageCover(center);
+				}
+		}
+		&-content{
+			padding-top: 16rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: 17rem;
+			
+				&-title{
+					font: var(--font-body-l-medium);
+					color: var(--color-gray-1);
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 1;
+					overflow: hidden;
+				}
+			
+				&-date{
+					color: var(--color-gray-3);
+					font: var(--font-body-s-medium);
+				}
+		}
+}

@@ -1,0 +1,14 @@
+.home-events{
+	padding: 96rem 0;
+	
+		&-list{
+			padding-top: 63rem;
+		}
+	
+		.section-actions{
+			display: flex;
+			justify-content: flex-end;
+			height: 100%;
+			align-items: center;
+		}
+}
