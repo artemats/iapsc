@@ -24,10 +24,11 @@ $xl: 1400;
 	--font-body-l-regular: 400 24rem / 140% var(--font-family-primary-regular);
 	
 	--font-body-m-regular: 400 18rem / 145% var(--font-family-primary-regular);
-	--font-body-m-semiBold: 600 18rem / 150% var(--font-family-primary-regular);
+	--font-body-m-semiBold: 600 18rem / 150% var(--font-family-primary-semiBold);
 	
 	--font-body-s-medium: 500 16rem / 135% var(--font-family-primary-regular);
 	
+	--font-body-xs-medium: 500 14rem / 140% var(--font-family-primary-medium);
 	--font-body-xs-regular: 400 14rem / 140% var(--font-family-primary-regular);
 	
 	/* Buttons */
@@ -47,6 +48,8 @@ $xl: 1400;
 	--color-gray-6:                                   #F1F1F3;
 	--color-gray-7:                                   #F6F6F9;
 	--color-white:                                    #FFFFFF;
+	
+	--color-system-error:                             #f34242;
 	
 	/* Transition */
 	--duration:                            .2s;

@@ -1,0 +1,25 @@
+.cta{
+	background-color: var(--color-primary);
+	color: var(--color-white);
+	padding: 64rem 0;
+	
+		&-content{
+			max-width: 432rem;
+			display: flex;
+			flex-direction: column;
+			gap: 24rem;
+			
+				&-title{
+					color: inherit;
+					max-width: 320rem;
+				}
+		}
+		
+		&-form{
+			display: flex;
+			align-items: center;
+			gap: 24rem;
+			padding: 24rem 0;
+			height: 100%;
+		}
+}

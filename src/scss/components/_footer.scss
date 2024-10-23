@@ -1,0 +1,70 @@
+@use "../settings/mixins";
+@use "../settings/variables";
+
+.footer{
+	background-color: var(--color-black);
+	padding: 48rem 0;
+	color: var(--color-white);
+	
+		&-contacts{
+			max-width: 300rem;
+			
+				&-title{
+					margin-bottom: 18rem;
+				}
+			
+				&-list{
+						li{
+						
+						}
+				}
+		}
+	
+		&-nav{
+			display: flex;
+			flex-direction: column;
+			gap: 48rem;
+			margin-bottom: 24rem;
+			
+				&-item{
+				
+				}
+			
+				&-title{
+					margin-bottom: 18rem;
+				}
+		}
+	
+		&-actions{
+			display: flex;
+			flex-direction: column;
+			gap: 16rem;
+			
+				.btn{
+					width: 100%;
+				}
+		}
+	
+		ul{
+			display: flex;
+			flex-direction: column;
+			gap: 8rem;
+			
+				li{
+					font: var(--font-body-xs-medium);
+					color: var(--color-gray-5);
+					
+						a{
+							color: var(--color-gray-5);
+							font: var(--font-body-xs-medium);
+							transition: color var(--duration) var(--ease);
+							
+								@include mixins.hover(variables.$md){
+									&:hover{
+                    color: var(--color-secondary);
+                  }
+								}
+						}
+				}
+		}
+}

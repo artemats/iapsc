@@ -2,15 +2,16 @@
 <html lang="en">
 @@include('html/components/head.html', { title: "International Association of Professional Security Consultants" })
 <body>
-<main>
+<main id="wrapper">
 	@@include('html/components/header.html', {})
 	@@include('html/pages/home/hero.html', {})
 	@@include('html/pages/home/about.html', {})
 	@@include('html/pages/home/services.html', {})
-	@@include('html/pages/home/events.html', {})
-	@@include('html/pages/home/news.html', {})
+	@@include('html/sections/events.html', {})
+	@@include('html/sections/news.html', {})
+	@@include('html/sections/CTA.html', {})
+	@@include('html/components/footer.html', {})
 </main>
-<!--@@include('html/footer.html', {})-->
 @@include('html/components/scripts.html')
 </body>
 </html>

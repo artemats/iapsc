@@ -1,0 +1,22 @@
+.home-news{
+	padding: 96px 0 161rem;
+		
+		&-list{
+			padding: 64rem 0;
+		}
+	
+		&-actions{
+			text-align: center;
+		}
+	
+		.section{
+				&-title{
+					text-align: center;
+					margin-bottom: 23rem;
+				}
+				&-description{
+					align-items: center;
+					margin-top: 23rem;
+				}
+		}
+}

@@ -1,9 +1,17 @@
+#wrapper{
+	position: relative;
+	overflow-x: hidden;
+}
+
 .container{
 	position: relative;
 	width: 100%;
 	max-width: 100%;
 	padding: 0 48rem;
 	
+		@media (min-width: 1500px) {
+			max-width: 1500rem;
+		}
 		@media (min-width: 1200px) {
 			max-width: 100%;
 		}
@@ -36,6 +44,7 @@
 }
 
 .section{
+	position: relative;
 	
 		&-description{
 			display: flex;
@@ -44,4 +53,10 @@
 			justify-content: flex-start;
 			gap: 26rem;
 		}
+}
+
+.copyright{
+	font: var(--font-body-xs-regular);
+	color: var(--color-gray-4);
+	margin-top: 25rem;
 }

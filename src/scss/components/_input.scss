@@ -1,0 +1,106 @@
+@use "../settings/mixins";
+@use "../settings/variables";
+
+.input{
+		&-container{
+			position: relative;
+			display: inline-block;
+			width: 100%;
+		}
+	
+		&-item{
+			display: block;
+			width: 100%;
+			height: 56rem;
+			font: var(--font-body-xs-regular);
+			color: var(--color-black);
+			border-radius: 4rem;
+			background-color: var(--color-white);
+			outline: 1rem rgba(255, 255, 255, 0) solid;
+			transition: outline .1s var(--ease), color var(--duration) var(--ease);
+			padding: 0 16rem;
+			
+				&::-webkit-input-placeholder {
+					color: var(--color-gray-3);
+					transition: color var(--duration) var(--ease);
+				}
+				&:-ms-input-placeholder {
+					color: var(--color-gray-3);
+					transition: color var(--duration) var(--ease);
+				}
+				&::-moz-placeholder {
+					color: var(--color-gray-3);
+					transition: color var(--duration) var(--ease);
+				}
+				&:-moz-placeholder {
+					color: var(--color-gray-3);
+					transition: color var(--duration) var(--ease);
+				}
+			
+				@include mixins.hover(variables.$md){
+					&:hover:not(:focus):not(.error){
+						outline-color: rgba(255, 255, 255, .4);
+						
+							&::-webkit-input-placeholder {
+								color: var(--color-gray-2);
+							}
+							&:-ms-input-placeholder {
+								color: var(--color-gray-2);
+							}
+							&::-moz-placeholder {
+								color: var(--color-gray-2);
+							}
+							&:-moz-placeholder {
+								color: var(--color-gray-2);
+							}
+					}
+				}
+			
+				&:focus{
+					outline-color: rgba(255, 255, 255, .6);
+					outline-width: 2rem;
+					
+						&::-webkit-input-placeholder {
+							color: var(--color-gray-2);
+						}
+						&:-ms-input-placeholder {
+							color: var(--color-gray-2);
+						}
+						&::-moz-placeholder {
+							color: var(--color-gray-2);
+						}
+						&:-moz-placeholder {
+							color: var(--color-gray-2);
+						}
+				}
+			
+				&.disabled,
+				&:disabled{
+					pointer-events: none;
+					opacity: .2;
+				}
+			
+				&.error{
+					outline-color: var(--color-system-error);
+					outline-width: 2rem;
+					
+						& ~ .input-message.__error{
+							opacity: 1;
+						}
+				}
+		}
+	
+		&-message{
+			position: absolute;
+			top: calc(100% + 3rem);
+			left: 0;
+			font: var(--font-body-xs-regular);
+			pointer-events: none;
+			opacity: 0;
+			transition: opacity var(--duration) var(--ease);
+			
+				&.__error{
+					color: var(--color-system-error);
+				}
+		}
+}

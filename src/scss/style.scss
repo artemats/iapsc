@@ -5,10 +5,15 @@
 @use "settings/typography";
 @use "libs/grid";
 @use "components";
+@use "sections";
 @use "pages";
 
 html {
 	font-size: calc(100vw / 1440);
+	
+		@media only screen and (min-width: 1500px) {
+			font-size: calc(100vw / 1920);
+		}
 	
 		@include mixins.maxWidth(variables.$xs){
 			font-size: calc(100vw / 360);
