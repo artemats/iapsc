@@ -46,6 +46,11 @@
 			height: 100%;
 			gap: 121rem;
 			
+				@include mixins.minWidth(variables.$md + 1){
+					opacity: 1 !important;
+					display: flex !important;
+				}
+			
 				@include mixins.maxWidth(variables.$md){
 					display: none;
 				}
@@ -102,7 +107,10 @@
 						}
 					
 						li{
-							
+								@include mixins.minWidth(variables.$md + 1){
+									opacity: 1 !important;
+									transform: none !important;
+								}
 								@include mixins.maxWidth(variables.$md){
 									opacity: 0;
 								}

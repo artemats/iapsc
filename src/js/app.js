@@ -4,5 +4,7 @@ import {toggleNav} from './modules/nav/toggleNav.js';
 toggleBurger()
 
 window.addEventListener('scroll', () => {
-	toggleNav(false);
+	if (window.innerWidth < 992) {
+		toggleNav(false);
+	}
 });
