@@ -82,13 +82,19 @@
 	<div class="header-panel">
 	  <div class="container">
 		  <div class="row">
-			  <div class="col-md-3">
+			  <div class="col-lg-3 col-6">
 				  <a href="/" class="header-logo">
 					  <picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="International Association of Professional Security Consultants"/></picture>
 				  </a>
 			  </div>
-			  <div class="col-md-9">
-				  <div class="header-nav">
+			  <div class="col-lg-9 col-6">
+				  <div class="header-nav" data-menu-label="Menu">
+					  <div class="abstract" data-order="12">
+						  <img src="img/abstract/abstract-5.svg" alt="Abstract" aria-hidden="true" />
+					  </div>
+					  <div class="abstract" data-order="13">
+						  <img src="img/abstract/abstract-4.svg" alt="Abstract" aria-hidden="true" />
+					  </div>
 					  <nav>
 						  <ul>
 							  <li><a href="#">About</a></li>
@@ -101,6 +107,13 @@
 					  <div class="header-nav-actions">
 						  <a href="#" class="btn">Find a consultant</a>
 						  <a href="#" class="btn btn-outline">Members</a>
+					  </div>
+				  </div>
+				  <div class="burger" id="burger">
+					  <div class="burger-box">
+						  <div class="burger-box-arrow"></div>
+						  <div class="burger-box-arrow"></div>
+						  <div class="burger-box-arrow"></div>
 					  </div>
 				  </div>
 			  </div>
@@ -143,10 +156,10 @@
 			<img src="img/abstract/abstract-6.svg" alt="Abstract" aria-hidden="true" />
 		</div>
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-lg-6">
 				<h2 class="h1 section-title">About Community</h2>
 			</div>
-			<div class="col-md-6">
+			<div class="col-lg-6">
 				<div class="section-description">
 					<p>A unique community of independent professionals establishing and refining security consulting best practices.</p>
 					<p>IAPSC offers members the opportunity to collaborate with top security professionals to develop and grow successful practices. IAPSC certified members have demonstrated knowledge of the highest levels of professionalism, skill, and integrity.</p>
@@ -154,13 +167,13 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-lg-4 col-md-5">
 				<div class="about-card">
 					<p class="about-card-title">3000+</p>
 					<p class="about-card-description">We have thousands of qualified consultants in our community</p>
 				</div>
 			</div>
-			<div class="col-md-8">
+			<div class="col-lg-8 col-md-7">
 				<div class="banner">
 					<picture><source srcset="img/banner-home.webp" type="image/webp"><img src="img/banner-home.jpg" alt="About Community" /></picture>
 				</div>
@@ -415,6 +428,17 @@
 					</div>
 				</a>
 			</div>
+			<!--		toggle on mobile 	-->
+			<div class="home-services-list-item" id="toggle-services">
+				<div class="home-service">
+					<p class="home-service-title">More services...</p>
+					<div class="home-service-icon">
+						<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M7.98666 22.128L18.9093 11.2054H10.424V8.5387H23.4613V21.576H20.7947V13.0907L9.87066 24.0134L7.98666 22.128Z" fill="currentColor"/>
+</svg>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -445,7 +469,7 @@
 		</div>
 		<div class="home-events-list">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-lg-4">
 					<div class="event">
 	<div class="event-thumb">
 		<picture><source srcset="img/events/event-1.webp" type="image/webp"><img src="img/events/event-1.jpg" alt="IAPSC Annual Conference, Jacksonville, FL. Register Now!" /></picture>
@@ -464,7 +488,7 @@
 	</div>
 </div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-lg-4">
 					<div class="event">
 	<div class="event-thumb">
 		<picture><source srcset="img/events/event-2.webp" type="image/webp"><img src="img/events/event-2.jpg" alt="IAPSC Webinar - "Power at the Edge with Illustra IQ AI"" /></picture>
@@ -483,7 +507,7 @@
 	</div>
 </div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-lg-4">
 					<div class="event">
 	<div class="event-thumb">
 		<picture><source srcset="img/events/event-3.webp" type="image/webp"><img src="img/events/event-3.jpg" alt="IAPSC Webinar Series: Application-specific Analytics to Enhance Security and Safety with Matthew Cirnigliaro" /></picture>
@@ -517,7 +541,7 @@
 		</div>
 		<div class="home-news-list">
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-lg-3">
 					<div class="new">
 	<div class="new-thumb">
 		<picture><source srcset="img/news/new-1.webp" type="image/webp"><img src="img/news/new-1.jpg" alt="Message from IAPSC President Michael D'Angelo" /></picture>
@@ -536,7 +560,7 @@
 	</div>
 </div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-lg-3">
 					<div class="new">
 	<div class="new-thumb">
 		<picture><source srcset="img/news/new-2.webp" type="image/webp"><img src="img/news/new-2.jpg" alt="2024 Officer & Board of Directors Election" /></picture>
@@ -555,7 +579,7 @@
 	</div>
 </div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-lg-3">
 					<div class="new">
 	<div class="new-thumb">
 		<picture><source srcset="img/news/new-3.webp" type="image/webp"><img src="img/news/new-3.jpg" alt="AI in Physical Security Market to Reach Huge Growth and Tremendous Demand in Next Coming years by 2030" /></picture>
@@ -574,7 +598,7 @@
 	</div>
 </div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-lg-3">
 					<div class="new">
 	<div class="new-thumb">
 		<picture><source srcset="img/news/new-4.webp" type="image/webp"><img src="img/news/new-4.jpg" alt="ChatGPT-4 Makes Consultants More Productive & Effective" /></picture>
@@ -645,6 +669,17 @@
 						<li>E-mail: <a href="mailto:iapsc@iapsc.org">iapsc@iapsc.org</a></li>
 						<li>Phone: <a href="tel:17163280402">(1) 716-328-0402</a></li>
 					</ul>
+					<div class="social">
+						<a href="#" target="_blank" class="social-item">
+							<img src="img/icons/instagram.svg" alt="Instagram" />
+						</a>
+						<a href="#" target="_blank" class="social-item">
+							<img src="img/icons/facebook.svg" alt="Facebook" />
+						</a>
+						<a href="#" target="_blank" class="social-item">
+							<img src="img/icons/linkedin.svg" alt="LinkedIn" />
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-3">

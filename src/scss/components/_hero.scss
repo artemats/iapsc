@@ -1,8 +1,13 @@
 @use "../settings/mixins";
+@use "../settings/variables";
 
 .hero{
 	text-align: center;
 	padding: 96rem 0;
+	
+		@include mixins.maxWidth(variables.$sm){
+			padding: 50rem 0 48rem;
+		}
 	
 		&-box{
 			display: flex;
@@ -11,12 +16,20 @@
 			align-items: center;
 			gap: 24rem;
 			
+				@include mixins.maxWidth(variables.$sm){
+					gap: 14rem;
+				}
+			
 				h1{
 					text-transform: capitalize;
 				}
 			
 				.btn{
 					margin-top: 24rem;
+					
+						@include mixins.maxWidth(variables.$sm){
+							margin-top: 10rem;
+						}
 				}
 		}
 	
@@ -25,6 +38,11 @@
 			overflow: hidden;
 			height: 755rem;
 			margin-top: 63rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					height: 67vw;
+					margin-top: 40rem;
+				}
 			
 				img{
 					@include mixins.imageCover(center);

@@ -1,10 +1,23 @@
 @use "../settings/mixins";
+@use "../settings/variables";
 
 .event{
+		@include mixins.maxWidth(variables.$md){
+			margin-bottom: 64rem;
+		}
+	
+		@include mixins.maxWidth(variables.$sm){
+			margin-bottom: 32rem;
+		}
+	
 		&-thumb{
 			height: 432rem;
 			overflow: hidden;
 			border-radius: 8px;
+			
+				@include mixins.maxWidth(variables.$md){
+					height: auto;
+				}
 			
 				img{
 					@include mixins.imageCover(center);
@@ -18,6 +31,10 @@
 			align-items: flex-start;
 			gap: 17rem;
 			
+				@include mixins.maxWidth(variables.$sm){
+					gap: 12rem;
+				}
+			
 				&-title{
 					font: var(--font-body-l-medium);
 					color: var(--color-gray-1);
@@ -25,6 +42,10 @@
 					-webkit-box-orient: vertical;
 					-webkit-line-clamp: 1;
 					overflow: hidden;
+					
+						@include mixins.maxWidth(variables.$md){
+							display: block;
+						}
 				}
 			
 				&-date{

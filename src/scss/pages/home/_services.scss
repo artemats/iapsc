@@ -4,6 +4,10 @@
 .home-services{
 	padding: 96rem 0;
 	
+		@include mixins.maxWidth(variables.$sm){
+			padding: 48rem 0;
+		}
+	
 		&-list{
 			display: flex;
 			flex-wrap: wrap;
@@ -11,9 +15,23 @@
 			width: 100%;
 			padding-top: 64rem;
 			
+				@include mixins.maxWidth(variables.$sm){
+          padding-top: 40rem;
+        }
+			
 				&-item{
 					position: relative;
 					width: calc(50% - 12rem);
+					
+						@include mixins.maxWidth(variables.$md){
+							width: 100%;
+						}
+					
+						@include mixins.maxWidth(variables.$sm){
+							&:nth-child(n + 10):not(#toggle-services){
+								display: none;
+							}
+						}
 					
 						&:before{
 							content: '';
@@ -58,11 +76,19 @@
 		&-title{
 			position: relative;
 			font: var(--font-body-s-medium);
+			
+				@include mixins.maxWidth(variables.$sm){
+					white-space: nowrap;
+					max-width: 100%;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
 		}
 	
 		&-icon{
 			width: 32rem;
 			height: 32rem;
+			min-width: 32rem;
 			color: var(--color-primary);
 			
 				svg{
@@ -75,5 +101,16 @@
 			&:hover{
 				background-color: var(--color-gray-7);
 			}
+		}
+}
+
+#toggle-services{
+		@include mixins.minWidth(variables.$sm + 1){
+			display: none;
+		}
+	
+		.home-service-title{
+			font: var(--font-body-m-semiBold);
+			color: var(--color-primary);
 		}
 }

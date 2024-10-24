@@ -1,11 +1,24 @@
 @use "../../settings/mixins";
+@use "../../settings/variables";
 
 .home-about{
 	padding: 96rem 0;
 	
+		@include mixins.maxWidth(variables.$sm){
+			padding: 48rem 0;
+		}
+	
 		.section{
 				&-title{
 					max-width: 500rem;
+					
+						@include mixins.maxWidth(variables.$md){
+							margin-bottom: 24rem;
+						}
+					
+						@include mixins.maxWidth(variables.$sm){
+							margin-bottom: 15rem;
+						}
 				}
 				&-description{
 				
@@ -15,7 +28,12 @@
 		.banner{
 			height: 364rem;
 			margin-top: 64rem;
-				
+			
+				@include mixins.maxWidth(variables.$sm){
+					height: 84vw;
+					margin-top: 16rem;
+				}
+			
 				img{
 					@include mixins.imageCover(center);
 				}
@@ -35,14 +53,23 @@
 			align-items: flex-start;
 			justify-content: space-between;
 			
-			&-title{
-				font-size: 96rem;
-				font-family: var(--font-family-primary-extraBold);
-				line-height: 1.11em;
-			}
+				@include mixins.maxWidth(variables.$sm){
+					margin-top: 40rem;
+					height: 260rem;
+				}
 			
-			&-description{
-				font: var(--font-body-l-regular);
-			}
+				&-title{
+					font-size: 96rem;
+					font-family: var(--font-family-primary-extraBold);
+					line-height: 1.11em;
+					
+						@include mixins.maxWidth(variables.$sm){
+							font-size: 64rem;
+						}
+				}
+				
+				&-description{
+					font: var(--font-body-l-regular);
+				}
 		}
 }

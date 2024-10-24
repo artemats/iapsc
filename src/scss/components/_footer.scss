@@ -9,8 +9,16 @@
 		&-contacts{
 			max-width: 300rem;
 			
+				@include mixins.maxWidth(variables.$sm){
+					padding-bottom: 7rem;
+				}
+			
 				&-title{
 					margin-bottom: 18rem;
+					
+						@include mixins.maxWidth(variables.$sm){
+              margin-bottom: 15rem;
+            }
 				}
 			
 				&-list{
@@ -25,6 +33,10 @@
 			flex-direction: column;
 			gap: 48rem;
 			margin-bottom: 24rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					gap: 22rem;
+				}
 			
 				&-item{
 				
@@ -49,6 +61,10 @@
 			display: flex;
 			flex-direction: column;
 			gap: 8rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					gap: 8.4rem;
+				}
 			
 				li{
 					font: var(--font-body-xs-medium);

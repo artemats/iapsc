@@ -1,3 +1,8 @@
-import {hi} from "./modules/functions.js";
+import {toggleBurger} from './modules/nav/toggleBurger.js';
+import {toggleNav} from './modules/nav/toggleNav.js';
 
-hi()
+toggleBurger()
+
+window.addEventListener('scroll', () => {
+	toggleNav(false);
+});

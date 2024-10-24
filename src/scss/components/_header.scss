@@ -1,4 +1,6 @@
 @use "../components/link";
+@use "../settings/mixins";
+@use "../settings/variables";
 
 .header{
 	position: absolute;
@@ -20,12 +22,21 @@
 	
 		&-panel{
 			padding: 16rem 0;
+			
+				@include mixins.maxWidth(variables.$sm){
+					padding: 12rem 0;
+				}
 		}
 	
 		&-logo{
 			width: 164rem;
 			height: 64rem;
 			display: inline-block;
+			
+				@include mixins.maxWidth(variables.$md){
+					width: 123rem;
+					height: 48rem;
+				}
 		}
 	
 		&-nav{
@@ -35,14 +46,66 @@
 			height: 100%;
 			gap: 121rem;
 			
+				@include mixins.maxWidth(variables.$md){
+					display: none;
+				}
+			
+				@include mixins.maxWidth(variables.$md){
+					position: fixed;
+					top: 36rem;
+					left: 0;
+					width: 100%;
+					background-color: var(--color-white);
+					padding-top: 79rem;
+					
+						&:before{
+							content: '';
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 78rem;
+							background-color: var(--color-white);
+						}
+					
+						&:after{
+							content: attr(data-menu-label);
+							position: absolute;
+							font: var(--font-body-l-medium);
+							color: var(--color-black);
+							top: 23rem;
+							left: 16rem;
+							pointer-events: none;
+						}
+				}
+			
+				@include mixins.maxWidth(variables.$sm){
+					top: 0;
+					padding-top: 71rem;
+					
+						&:before{
+							height: 70rem;
+						}
+				}
+			
 				ul{
 					display: flex;
 					align-items: center;
 					gap: 32rem;
 					
+						@include mixins.maxWidth(variables.$md){
+							flex-direction: column;
+							align-items: flex-start;
+							border-top: 1rem var(--color-gray-6) solid;
+							padding: 36rem 16px;
+							gap: 32rem;
+						}
+					
 						li{
 							
-							
+								@include mixins.maxWidth(variables.$md){
+									opacity: 0;
+								}
 								a{
 									@extend .link;
 								}
@@ -53,10 +116,36 @@
 					display: flex;
 					align-items: center;
 					gap: 16rem;
+					
+						@include mixins.maxWidth(variables.$md){
+							padding: 16rem;
+						}
+					
+						@include mixins.maxWidth(variables.$sm){
+							flex-direction: column;
+						}
+					
+						.btn{
+								@include mixins.maxWidth(variables.$sm){
+									width: 100%;
+									height: 56rem;
+									line-height: 54rem;
+								}
+						}
 				}
+		}
+	
+		.alert{
+				@include mixins.maxWidth(variables.$sm){
+          display: none;
+        }
 		}
 	
 		& + .section{
 			margin-top: 132rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					margin-top: 72rem;
+				}
 		}
 }

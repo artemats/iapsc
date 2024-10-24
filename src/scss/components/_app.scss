@@ -1,3 +1,6 @@
+@use "../settings/mixins";
+@use "../settings/variables";
+
 #wrapper{
 	position: relative;
 	overflow-x: hidden;
@@ -8,6 +11,10 @@
 	width: 100%;
 	max-width: 100%;
 	padding: 0 48rem;
+	
+		@include mixins.maxWidth(variables.$sm){
+			padding: 0 16rem;
+		}
 	
 		@media (min-width: 1500px) {
 			max-width: 1500rem;
@@ -52,6 +59,10 @@
 			align-items: flex-start;
 			justify-content: flex-start;
 			gap: 26rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					gap: 22rem;
+				}
 		}
 }
 
@@ -59,4 +70,31 @@
 	font: var(--font-body-xs-regular);
 	color: var(--color-gray-4);
 	margin-top: 25rem;
+	
+		@include mixins.maxWidth(variables.$sm){
+			margin-top: 33rem;
+		}
+}
+
+.social{
+	display: flex;
+	align-items: center;
+	gap: 16rem;
+	margin: 16rem 0;
+	
+		&-item{
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 40rem;
+			height: 40rem;
+			background-color: var(--color-gray-1);
+			border-radius: 4rem;
+			
+				img{
+					width: 24rem;
+					height: 24rem;
+				}
+		}
 }

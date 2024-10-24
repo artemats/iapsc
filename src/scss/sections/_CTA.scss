@@ -1,7 +1,14 @@
+@use "../settings/mixins";
+@use "../settings/variables";
+
 .cta{
 	background-color: var(--color-primary);
 	color: var(--color-white);
 	padding: 64rem 0;
+	
+		@include mixins.maxWidth(variables.$sm){
+			padding: 48rem 0;
+		}
 	
 		&-content{
 			max-width: 432rem;
@@ -9,9 +16,17 @@
 			flex-direction: column;
 			gap: 24rem;
 			
+				@include mixins.maxWidth(variables.$sm){
+					gap: 16rem;
+				}
+			
 				&-title{
 					color: inherit;
 					max-width: 320rem;
+					
+						@include mixins.maxWidth(variables.$sm){
+							font-size: 40rem;
+						}
 				}
 		}
 		
@@ -21,5 +36,17 @@
 			gap: 24rem;
 			padding: 24rem 0;
 			height: 100%;
+			
+				@include mixins.maxWidth(variables.$sm){
+          flex-direction: column;
+					gap: 16rem;
+					padding: 40rem 0 0;
+        }
+			
+				.btn{
+						@include mixins.maxWidth(variables.$sm){
+							width: 100%;
+						}
+				}
 		}
 }

@@ -39,6 +39,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "gsap": "^3.12.5",
     "gulp-postcss": "^9.0.1"
   }
 }

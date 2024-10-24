@@ -1,0 +1,63 @@
+@use "../settings/mixins";
+@use "../settings/variables";
+
+.burger{
+	position: relative;
+	width: 24rem;
+	height: 100%;
+	margin: auto 0 auto auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+		@include mixins.minWidth(variables.$md + 1){
+			display: none;
+		}
+	
+		&-box{
+			position: relative;
+			width: 20rem;
+			height: 16rem;
+			
+				&-arrow{
+					position: absolute;
+					background-color: var(--color-primary);
+					height: 2rem;
+					width: 100%;
+					right: 0;
+					transition: all var(--duration) var(--ease);
+					
+						&:nth-child(1){
+							top: 0;
+						}
+					
+						&:nth-child(2){
+							top: 50%;
+							margin-top: -1rem;
+						}
+					
+						&:nth-child(3){
+							bottom: 0;
+						}
+				}
+		}
+	
+		&.active{
+			
+				.burger-box-arrow{
+					&:nth-child(1){
+						transform: rotate(45deg);
+						top: 7rem;
+					}
+					
+					&:nth-child(2){
+						width: 0;
+					}
+					
+					&:nth-child(3){
+						transform: rotate(-45deg);
+						bottom: 7rem;
+					}
+				}
+		}
+}

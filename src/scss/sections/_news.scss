@@ -1,8 +1,23 @@
+@use "../settings/mixins";
+@use "../settings/variables";
+
 .home-news{
 	padding: 96px 0 161rem;
-		
+	
+		@include mixins.maxWidth(variables.$sm){
+			padding: 48rem 0;
+		}
+	
 		&-list{
 			padding: 64rem 0;
+			
+				@include mixins.maxWidth(variables.$md){
+					padding-bottom: 0;
+				}
+			
+				@include mixins.maxWidth(variables.$sm){
+					padding: 38rem 0 16rem;
+				}
 		}
 	
 		&-actions{
@@ -13,10 +28,22 @@
 				&-title{
 					text-align: center;
 					margin-bottom: 23rem;
+					
+						@include mixins.maxWidth(variables.$sm){
+							margin-bottom: 15rem;
+						}
 				}
 				&-description{
 					align-items: center;
 					margin-top: 23rem;
+					
+						@include mixins.maxWidth(variables.$sm){
+							margin-top: 15rem;
+						}
+					
+						p{
+							text-align: center;
+						}
 				}
 		}
 }

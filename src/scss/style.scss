@@ -15,8 +15,12 @@ html {
 			font-size: calc(100vw / 1920);
 		}
 	
-		@include mixins.maxWidth(variables.$xs){
-			font-size: calc(100vw / 360);
+		@include mixins.maxWidth(variables.$md){
+			font-size: calc(100vw / 991);
+		}
+	
+		@include mixins.maxWidth(variables.$sm){
+			font-size: calc(100vw / 390);
 		}
 }
 

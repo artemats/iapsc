@@ -1,11 +1,28 @@
 @use "../settings/mixins";
+@use "../settings/variables";
 
 .new{
+	
+		@include mixins.maxWidth(variables.$md){
+			margin-bottom: 64rem;
+		}
+	
+		@include mixins.maxWidth(variables.$sm){
+			margin-bottom: 24rem;
+		}
 	
 		&-thumb{
 			height: 245rem;
 			border-radius: 8px 8px 0 0;
 			overflow: hidden;
+			
+				@include mixins.maxWidth(variables.$md){
+					height: auto;
+				}
+			
+				@include mixins.maxWidth(variables.$sm){
+					height: 63vw;
+				}
 			
 				img{
 					@include mixins.imageCover(center);
@@ -18,6 +35,10 @@
 			padding: 16rem 16rem 70rem;
 			position: relative;
 			
+				@include mixins.maxWidth(variables.$sm){
+					padding: 16rem 16rem 94rem;
+				}
+			
 				&-title{
 					color: var(--color-gray-1);
 					font: var(--font-body-l-medium);
@@ -27,6 +48,11 @@
 					-webkit-line-clamp: 3;
 					overflow: hidden;
 					height: 83rem;
+					
+						@include mixins.maxWidth(variables.$md){
+							display: block;
+							height: auto;
+						}
 				}
 			
 				&-date{

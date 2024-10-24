@@ -1,3 +1,6 @@
+@use "../settings/mixins";
+@use "../settings/variables";
+
 .abstract{
 	position: absolute;
 	pointer-events: none;
@@ -14,7 +17,12 @@
 			width: 727rem;
 			height: 727rem;
 			top: -450rem;
-			right: -202px;
+			right: -202rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					top: -587rem;
+					right: -468rem;
+				}
 		}
 	
 		&[data-order="2"]{
@@ -22,6 +30,10 @@
 			height: 240rem;
 			left: -55rem;
 			top: 184rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					display: none;
+				}
 		}
 	
 		&[data-order="3"]{
@@ -30,6 +42,11 @@
 			left: 47.3%;
 			transform: translateX(-50%);
 			top: 128rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					left: 39%;
+					top: 150rem;
+				}
 		}
 	
 		&[data-order="4"]{
@@ -37,6 +54,11 @@
 			height: 203rem;
 			bottom: -76rem;
 			left: 30rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					bottom: -58rem;
+					left: -40rem;
+				}
 		}
 	
 		&[data-order="5"]{
@@ -44,6 +66,12 @@
 			height: 411rem;
 			left: 138rem;
 			top: -18rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					left: 50%;
+					top: 300rem;
+					transform: translateX(-50%);
+				}
 		}
 	
 		&[data-order="6"]{
@@ -51,6 +79,10 @@
 			height: 182rem;
 			right: -48rem;
 			bottom: -21rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					display: none;
+				}
 		}
 	
 		&[data-order="7"]{
@@ -66,6 +98,10 @@
 			height: 181rem;
 			top: -12rem;
 			left: -48rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					display: none;
+				}
 		}
 	
 		&[data-order="9"]{
@@ -73,6 +109,11 @@
 			height: 84rem;
 			right: -8rem;
 			top: -34rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					top: 81rem;
+					left: 148rem;
+				}
 		}
 	
 		&[data-order="10"]{
@@ -81,6 +122,13 @@
 			left: 50%;
 			top: 27.5%;
 			transform: translate(-50%,-50%);
+			
+				@include mixins.maxWidth(variables.$sm){
+					top: -40rem;
+					width: 516rem;
+					height: 516rem;
+					transform: translate(-50%,0);
+				}
 		}
 	
 		&[data-order="11"]{
@@ -90,5 +138,28 @@
 			top: -224rem;
 			opacity: .3;
 			z-index: 0;
+			
+				@include mixins.maxWidth(variables.$sm){
+					display: none;
+				}
+		}
+	
+		&[data-order="12"]{
+			width: 411rem;
+			height: 411rem;
+			top: -190rem;
+			left: -190rem;
+			
+				@include mixins.minWidth(variables.$md + 1){
+					display: none;
+				}
+		}
+	
+		&[data-order="13"]{
+			width: 267rem;
+			height: 192rem;
+			top: 56%;
+			transform: translateY(-50%);
+			right: -60rem;
 		}
 }

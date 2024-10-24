@@ -1,7 +1,9 @@
+@use "mixins";
+
 /* Breakpoints */
 $xs: 480;
-$sm: 600;
-$md: 900;
+$sm: 767;
+$md: 991;
 $lg: 1200;
 $xl: 1400;
 
@@ -54,4 +56,14 @@ $xl: 1400;
 	/* Transition */
 	--duration:                            .2s;
 	--ease:                                ease;
+}
+
+@include mixins.maxWidth($md){
+	:root {
+		/* Headings */
+		--font-heading-h1: 700 48rem / 110% var(--font-family-primary-bold);
+		
+		/* Body */
+		--font-body-m-regular: 400 18rem / 135% var(--font-family-primary-regular);
+	}
 }

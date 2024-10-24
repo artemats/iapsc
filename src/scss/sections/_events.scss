@@ -1,8 +1,23 @@
+@use "../settings/mixins";
+@use "../settings/variables";
+
 .home-events{
 	padding: 96rem 0;
 	
+		@include mixins.maxWidth(variables.$md){
+			padding-bottom: 32rem;
+		}
+	
+		@include mixins.maxWidth(variables.$sm){
+			padding: 48rem 0 18rem;
+		}
+	
 		&-list{
 			padding-top: 63rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					padding-top: 38rem;
+				}
 		}
 	
 		.section-actions{
@@ -10,5 +25,10 @@
 			justify-content: flex-end;
 			height: 100%;
 			align-items: center;
+			
+				@include mixins.maxWidth(variables.$sm){
+					justify-content: flex-start;
+					padding-top: 18rem;
+				}
 		}
 }
