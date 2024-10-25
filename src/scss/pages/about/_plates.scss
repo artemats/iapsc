@@ -1,0 +1,37 @@
+.plates{
+		&-item{
+			display: none;
+			
+				&-content{
+					padding: 48rem;
+					background-color: var(--color-gray-7);
+					border-radius: 32px;
+					
+						h1,h2,h3,h4,h5,h6{
+							margin-bottom: 24rem;
+						}
+					
+						a{
+							color: var(--color-primary);
+							text-decoration: underline;
+						}
+					
+						p{
+							line-height: 133%;
+								&:not(:last-child){
+									margin-bottom: 24rem;
+								}
+						}
+					
+						ul{
+							padding-left: 27rem;
+							margin: 24rem 0;
+						}
+					
+						li{
+							list-style: disc;
+							line-height: 133%;
+						}
+				}
+		}
+}
