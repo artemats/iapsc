@@ -1,3 +1,10 @@
+@use "../../settings/mixins";
+@use "../../settings/variables";
+
 .about-switcher{
 	padding: 64rem 0 32rem;
+	
+		@include mixins.maxWidth(variables.$sm){
+			padding: 48rem 0;
+		}
 }

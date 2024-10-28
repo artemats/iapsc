@@ -1,3 +1,6 @@
+@use "../../settings/mixins";
+@use "../../settings/variables";
+
 .plates{
 		&-item{
 			display: none;
@@ -6,6 +9,11 @@
 					padding: 48rem;
 					background-color: var(--color-gray-7);
 					border-radius: 32px;
+					
+						@include mixins.maxWidth(variables.$sm){
+							padding: 32rem 16rem;
+							font: var(--font-body-s-regular);
+						}
 					
 						h1,h2,h3,h4,h5,h6{
 							margin-bottom: 24rem;
@@ -21,6 +29,10 @@
 								&:not(:last-child){
 									margin-bottom: 24rem;
 								}
+							
+								@include mixins.maxWidth(variables.$sm){
+									line-height: 137%;
+								}
 						}
 					
 						ul{
@@ -31,6 +43,10 @@
 						li{
 							list-style: disc;
 							line-height: 133%;
+							
+								@include mixins.maxWidth(variables.$sm){
+									line-height: 137%;
+								}
 						}
 				}
 		}
