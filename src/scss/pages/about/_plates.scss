@@ -3,8 +3,6 @@
 
 .plates{
 		&-item{
-			display: none;
-			
 				&-content{
 					padding: 48rem;
 					background-color: var(--color-gray-7);
@@ -50,4 +48,10 @@
 						}
 				}
 		}
+}
+
+#switcher-plates{
+	.plates-item{
+		display: none;
+	}
 }

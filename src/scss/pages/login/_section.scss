@@ -1,0 +1,10 @@
+@use "../../settings/mixins";
+@use "../../settings/variables";
+
+.auth{
+	padding: 64rem 0;
+	
+		@include mixins.maxWidth(variables.$sm){
+			padding: 48rem 0;
+		}
+}

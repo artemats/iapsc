@@ -129,9 +129,21 @@
 			position: relative;
 			color: currentColor;
 			
+				&.loading{
+					display: none;
+				}
+			
 				svg{
 					width: 100%;
 					height: 100%;
+				}
+		}
+		
+		// loading state
+		&.loading{
+			pointer-events: none;
+				.btn-icon.loading{
+					display: inline-flex;
 				}
 		}
 }

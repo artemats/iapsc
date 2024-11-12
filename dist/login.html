@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta
+		name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+	/>
+	<title>Login - International Association of Professional Security Consultants</title>
+	
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+	
+	<meta name="msapplication-TileColor" content="#ffffff" />
+	<meta name="theme-color" content="#ffffff" />
+	<meta name="msapplication-navbutton-color" content="#ffffff" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
+	
+	<link
+		rel="preload"
+		href="fonts/Archivo-Bold.woff"
+		as="font"
+		type="font/woff"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		href="fonts/Archivo-Bold.woff2"
+		as="font"
+		type="font/woff2"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		href="fonts/Archivo-SemiBold.woff"
+		as="font"
+		type="font/woff"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		href="fonts/Archivo-SemiBold.woff2"
+		as="font"
+		type="font/woff2"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		href="fonts/Archivo-Medium.woff"
+		as="font"
+		type="font/woff"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		href="fonts/Archivo-Medium.woff2"
+		as="font"
+		type="font/woff2"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		href="fonts/Archivo-Regular.woff"
+		as="font"
+		type="font/woff"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		href="fonts/Archivo-Regular.woff2"
+		as="font"
+		type="font/woff2"
+		crossorigin="anonymous"
+	/>
+	
+	<link rel="stylesheet" href="css/style.min.css" />
+</head>
+<body>
+<main id="wrapper">
+	<header class="header">
+	<div class="alert">
+		<p>The most widely recognized and respected organization of independent security consultants since 1984.</p>
+	</div>
+	<div class="header-panel">
+	  <div class="container">
+		  <div class="row">
+			  <div class="col-lg-3 col-6">
+				  <a href="/" class="header-logo">
+					  <picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="International Association of Professional Security Consultants"/></picture>
+				  </a>
+			  </div>
+			  <div class="col-lg-9 col-6">
+				  <div class="header-nav" data-menu-label="Menu">
+					  <div class="abstract" data-order="12">
+						  <img src="img/abstract/abstract-5.svg" alt="Abstract" aria-hidden="true" />
+					  </div>
+					  <div class="abstract" data-order="13">
+						  <img src="img/abstract/abstract-4.svg" alt="Abstract" aria-hidden="true" />
+					  </div>
+					  <nav>
+						  <ul>
+							  <li><a href="about.html">About</a></li>
+							  <li><a href="#">Join</a></li>
+							  <li><a href="#">Member portal</a></li>
+							  <li><a href="#">Events & News</a></li>
+							  <li><a href="#">Press</a></li>
+						  </ul>
+					  </nav>
+					  <div class="header-nav-actions">
+						  <a href="#" class="btn">Find a consultant</a>
+						  <a href="#" class="btn btn-outline">Members</a>
+					  </div>
+				  </div>
+				  <div class="burger" id="burger">
+					  <div class="burger-box">
+						  <div class="burger-box-arrow"></div>
+						  <div class="burger-box-arrow"></div>
+						  <div class="burger-box-arrow"></div>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	</div>
+</header>
+	<section class="section auth">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-3">
+					<div class="sidebar">
+	<p class="sidebar-label">Member directory</p>
+	<div class="sidebar-list">
+		<ul>
+			<li><a href="/login.html" class="active">Log In</a></li>
+		</ul>
+	</div>
+</div>
+				</div>
+				<div class="col-lg-8 offset-lg-1 col-md-9">
+					<div class="plates">
+	<div class="plates-item">
+		<div class="plates-item-content auth-form">
+			<h3>Log In</h3>
+			<p>Please Log In to see more information</p>
+			<!--			for display error state add class "error" to auth-form-message			-->
+			<div class="auth-form-message">
+				<div class="auth-form-message-icon">
+					<img src="img/icons/attention.svg" alt="Fail login" />
+				</div>
+				<p class="auth-form-message-text">Log In failed. Username and password do not match or you do not have an account yet.</p>
+			</div>
+			<form>
+				<div class="form-row">
+					<label class="input-container">
+						<!--			for display error state add class "error" to input tag			-->
+						<!--			for display warm state add class "warm" to input tag			-->
+						<!--			for display success state add class "success" to input tag			-->
+						<span class="input-label">Username</span>
+						<input type="text" class="input-item sm" placeholder="Username" />
+						<span class="input-message __error">Username is required!</span>
+						<span class="input-message __warm">Warm message!</span>
+						<span class="input-message __success">Success message</span>
+					</label>
+					<label class="input-container">
+						<!--			for display error state add class "error" to input tag			-->
+						<!--			for display warm state add class "warm" to input tag			-->
+						<!--			for display success state add class "success" to input tag			-->
+						<span class="input-label">Password</span>
+						<input type="password" class="input-item sm" placeholder="Password" />
+						<span class="input-message __error">Password is required!</span>
+						<span class="input-message __warm">Warm message!</span>
+						<span class="input-message __success">Success message</span>
+					</label>
+				</div>
+				<label class="input-container-checkbox">
+					<input type="checkbox" class="input-item" />
+					<span class="input-item-icon"></span>
+					<span class="input-item-title">Remember me</span>
+				</label>
+				<!--		add class loading to btn to display animated spinner while form is submitting		-->
+				<button class="btn btn-lg">
+					<span class="btn-icon loading">
+						<img src="img/spinner.svg" alt="Loading...">
+					</span>
+					<span class="btn-label">Log In</span>
+				</button>
+				<p class="auth-form-more">Don’t you have an account? <a href="#">Sign In</a></p>
+			</form>
+		</div>
+		<div class="auth-form-details">
+			<a href="#">Forgot your password?</a>
+			<a href="#">Forgot your username?</a>
+		</div>
+	</div>
+</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section home-events">
+	<div class="container">
+		<div class="abstract" data-order="8">
+			<img src="img/abstract/abstract-7.svg" alt="Abstract" aria-hidden="true" />
+		</div>
+		<div class="abstract" data-order="9">
+			<img src="img/abstract/abstract-8.svg" alt="Abstract" aria-hidden="true" />
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<h3 class="h1">Upcoming Events</h3>
+			</div>
+			<div class="col-md-6">
+				<div class="section-actions">
+					<a href="#" class="btn btn-outline btn-lg">
+						<span class="btn-label">View all Events</span>
+						<span class="btn-icon">
+							<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M7.98666 22.128L18.9093 11.2054H10.424V8.5387H23.4613V21.576H20.7947V13.0907L9.87066 24.0134L7.98666 22.128Z" fill="currentColor"/>
+</svg>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="home-events-list">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="event">
+	<div class="event-thumb">
+		<picture><source srcset="img/events/event-1.webp" type="image/webp"><img src="img/events/event-1.jpg" alt="IAPSC Annual Conference, Jacksonville, FL. Register Now!" /></picture>
+	</div>
+	<div class="event-content">
+		<p class="event-content-date">Event date: 8 Aug 2024</p>
+		<p class="event-content-title">IAPSC Annual Conference, Jacksonville, FL. Register Now!</p>
+		<a href="#" class="btn btn-link">
+			<span class="btn-label">Read more</span>
+			<span class="btn-icon">
+				<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M4.5 10.9999H16.086L11.586 6.49994L13 5.08594L19.914 11.9999L13 18.9139L11.586 17.4999L16.086 12.9999H4.5V10.9999Z" fill="currentColor"/>
+</svg>
+			</span>
+		</a>
+	</div>
+</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="event">
+	<div class="event-thumb">
+		<picture><source srcset="img/events/event-2.webp" type="image/webp"><img src="img/events/event-2.jpg" alt="IAPSC Webinar - "Power at the Edge with Illustra IQ AI"" /></picture>
+	</div>
+	<div class="event-content">
+		<p class="event-content-date">Event date: 24 Aug 2024</p>
+		<p class="event-content-title">IAPSC Webinar - "Power at the Edge with Illustra IQ AI"</p>
+		<a href="#" class="btn btn-link">
+			<span class="btn-label">Read more</span>
+			<span class="btn-icon">
+				<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M4.5 10.9999H16.086L11.586 6.49994L13 5.08594L19.914 11.9999L13 18.9139L11.586 17.4999L16.086 12.9999H4.5V10.9999Z" fill="currentColor"/>
+</svg>
+			</span>
+		</a>
+	</div>
+</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="event">
+	<div class="event-thumb">
+		<picture><source srcset="img/events/event-3.webp" type="image/webp"><img src="img/events/event-3.jpg" alt="IAPSC Webinar Series: Application-specific Analytics to Enhance Security and Safety with Matthew Cirnigliaro" /></picture>
+	</div>
+	<div class="event-content">
+		<p class="event-content-date">Event date: 12 Sep 2024</p>
+		<p class="event-content-title">IAPSC Webinar Series: Application-specific Analytics to Enhance Security and Safety with Matthew Cirnigliaro</p>
+		<a href="#" class="btn btn-link">
+			<span class="btn-label">Read more</span>
+			<span class="btn-icon">
+				<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M4.5 10.9999H16.086L11.586 6.49994L13 5.08594L19.914 11.9999L13 18.9139L11.586 17.4999L16.086 12.9999H4.5V10.9999Z" fill="currentColor"/>
+</svg>
+			</span>
+		</a>
+	</div>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+	<footer class="footer">
+  <div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="footer-contacts">
+					<p class="footer-contacts-title">Contacts</p>
+					<ul class="footer-contacts-list">
+						<li>Address: 30 N Gould Street, Suite 29147, Sheridan, WY 82801, United States of America</li>
+						<li>E-mail: <a href="mailto:iapsc@iapsc.org">iapsc@iapsc.org</a></li>
+						<li>Phone: <a href="tel:17163280402">(1) 716-328-0402</a></li>
+					</ul>
+					<div class="social">
+						<a href="#" target="_blank" class="social-item">
+							<img src="img/icons/instagram.svg" alt="Instagram" />
+						</a>
+						<a href="#" target="_blank" class="social-item">
+							<img src="img/icons/facebook.svg" alt="Facebook" />
+						</a>
+						<a href="#" target="_blank" class="social-item">
+							<img src="img/icons/linkedin.svg" alt="LinkedIn" />
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="footer-nav">
+					<div class="footer-nav-item">
+						<p class="footer-nav-title">About Us</p>
+						<ul>
+							<li><a href="#">By-Laws</a></li>
+							<li><a href="#">IAPSC Code of Ethics</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="#">Certified Security</a></li>
+							<li><a href="#">Consultant</a></li>
+							<li><a href="#">History</a></li>
+							<li><a href="#">Officers & Directors</a></li>
+							<li><a href="#">Security Best Practices</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="footer-nav">
+					<div class="footer-nav-item">
+						<p class="footer-nav-title">Media Services</p>
+						<ul>
+							<li><a href="#">Press Kit</a></li>
+							<li><a href="#">Security Speaker Bureau</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-item">
+						<p class="footer-nav-title">Become a Member</p>
+						<ul>
+							<li><a href="#">Benefits</a></li>
+							<li><a href="#">Classifications</a></li>
+							<li><a href="#">Qualifications</a></li>
+							<li><a href="#">Testimonials</a></li>
+							<li><a href="#">Apply for Membership</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="footer-actions">
+					<a href="#" class="btn btn-lg btn-white">
+						<span class="btn-label">Find a consultant</span>
+					</a>
+					<a href="#" class="btn btn-lg btn-white btn-outline">
+						<span class="btn-label">Member section</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	  <div class="row">
+		  <div class="col-12">
+			 <p class="copyright">&copy; 2024 International Association of Professional Security Consultants | Privacy Statement</p>
+		  </div>
+	  </div>
+  </div>
+</footer>
+</main>
+<script src="js/app.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+@use "../../settings/mixins";
+@use "../../settings/variables";
+
+.auth-form{
+		&-details{
+			display: flex;
+			flex-direction: column;
+			gap: 12rem;
+			margin-top: 38rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					margin-top: 30rem;
+				}
+			
+				ul{
+					margin: 0;
+					padding: 0;
+				}
+			
+				li{
+					list-style-type: none;
+				}
+			
+				a{
+					color: var(--color-primary);
+					font: var(--font-body-m-semiBold);
+					text-decoration: none;
+				}
+		}
+	
+		&-more{
+			text-align: center;
+			color: var(--color-black);
+			font: var(--font-body-s-regular);
+			padding-top: 6rem;
+			
+				a{
+					color: var(--color-primary);
+					font: var(--font-body-m-semiBold);
+					text-decoration: navajowhite;
+					margin-left: 16rem;
+				}
+		}
+	
+		&-message{
+			display: none;
+			gap: 4rem;
+			padding: 7rem 0 27rem;
+			
+				&-icon{
+					width: 16rem;
+					min-width: 16rem;
+					height: 16rem;
+					margin-top: 1rem;
+					
+						img{
+							@include mixins.imageContain(center);
+						}
+					
+						@include mixins.maxWidth(variables.$sm){
+							margin-top: 2rem;
+						}
+				}
+			
+				&-text{
+					font: var(--font-body-xs-regular);
+				}
+			
+				&.error{
+					color: var(--color-system-error);
+					display: flex;
+				}
+		}
+	
+		.input-container-checkbox{
+			margin-top: 24rem;
+			padding-left: 4rem;
+			padding-right: 4rem;
+		}
+	
+		.btn{
+			width: 100%;
+			margin: 24rem 0;
+		}
+	
+		h1, h2, h3, h4, h5, h6{
+			margin-bottom: 16rem;
+		}
+	
+		form{
+			padding-top: 5rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					padding-top: 9rem;
+				}
+		}
+}

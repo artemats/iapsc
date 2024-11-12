@@ -98,3 +98,15 @@
 				}
 		}
 }
+
+.form{
+		&-row{
+			display: flex;
+			gap: 24rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					flex-direction: column;
+					gap: 16rem;
+				}
+		}
+}

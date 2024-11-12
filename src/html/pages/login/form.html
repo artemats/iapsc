@@ -1,0 +1,56 @@
+<div class="plates">
+	<div class="plates-item">
+		<div class="plates-item-content auth-form">
+			<h3>Log In</h3>
+			<p>Please Log In to see more information</p>
+			<!--			for display error state add class "error" to auth-form-message			-->
+			<div class="auth-form-message">
+				<div class="auth-form-message-icon">
+					<img src="img/icons/attention.svg" alt="Fail login" />
+				</div>
+				<p class="auth-form-message-text">Log In failed. Username and password do not match or you do not have an account yet.</p>
+			</div>
+			<form>
+				<div class="form-row">
+					<label class="input-container">
+						<!--			for display error state add class "error" to input tag			-->
+						<!--			for display warm state add class "warm" to input tag			-->
+						<!--			for display success state add class "success" to input tag			-->
+						<span class="input-label">Username</span>
+						<input type="text" class="input-item sm" placeholder="Username" />
+						<span class="input-message __error">Username is required!</span>
+						<span class="input-message __warm">Warm message!</span>
+						<span class="input-message __success">Success message</span>
+					</label>
+					<label class="input-container">
+						<!--			for display error state add class "error" to input tag			-->
+						<!--			for display warm state add class "warm" to input tag			-->
+						<!--			for display success state add class "success" to input tag			-->
+						<span class="input-label">Password</span>
+						<input type="password" class="input-item sm" placeholder="Password" />
+						<span class="input-message __error">Password is required!</span>
+						<span class="input-message __warm">Warm message!</span>
+						<span class="input-message __success">Success message</span>
+					</label>
+				</div>
+				<label class="input-container-checkbox">
+					<input type="checkbox" class="input-item" />
+					<span class="input-item-icon"></span>
+					<span class="input-item-title">Remember me</span>
+				</label>
+				<!--		add class loading to btn to display animated spinner while form is submitting		-->
+				<button class="btn btn-lg">
+					<span class="btn-icon loading">
+						<img src="img/spinner.svg" alt="Loading...">
+					</span>
+					<span class="btn-label">Log In</span>
+				</button>
+				<p class="auth-form-more">Don’t you have an account? <a href="#">Sign In</a></p>
+			</form>
+		</div>
+		<div class="auth-form-details">
+			<a href="#">Forgot your password?</a>
+			<a href="#">Forgot your username?</a>
+		</div>
+	</div>
+</div>

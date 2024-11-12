@@ -4,8 +4,26 @@
 .input{
 		&-container{
 			position: relative;
-			display: inline-block;
+			display: flex;
+			flex-direction: column;
+			gap: 8rem;
 			width: 100%;
+			
+				&-checkbox{
+					@extend .input-container;
+					display: inline-flex;
+					width: auto;
+					flex-direction: row;
+					align-items: center;
+					gap: 12rem;
+					padding: 8rem 0;
+					
+						@include mixins.hover(variables.$md){
+							&:hover{
+								cursor: pointer;
+							}
+						}
+				}
 		}
 	
 		&-item{
@@ -37,8 +55,18 @@
 					transition: color var(--duration) var(--ease);
 				}
 			
+				&:-webkit-autofill {
+					-webkit-box-shadow:0 0 0 56rem var(--color-white) inset;
+					-webkit-text-fill-color: var(--color-black);
+				}
+				
+				&:-webkit-autofill:focus {
+					-webkit-box-shadow: 0 0 0 56rem var(--color-white) inset;
+					-webkit-text-fill-color: var(--color-black);
+				}
+			
 				@include mixins.hover(variables.$md){
-					&:hover:not(:focus):not(.error){
+					&:hover:not(:focus):not(.error):not(.sm){
 						outline-color: rgba(255, 255, 255, .4);
 						
 							&::-webkit-input-placeholder {
@@ -80,27 +108,150 @@
 					opacity: .2;
 				}
 			
+				&.sm{
+					height: 46rem;
+					outline-color: var(--color-gray-5);
+					
+						&:-webkit-autofill {
+							-webkit-box-shadow:0 0 0 46rem var(--color-white) inset;
+						}
+						
+						&:-webkit-autofill:focus {
+							-webkit-box-shadow: 0 0 0 46rem var(--color-white) inset;
+						}
+					
+						@include mixins.hover(variables.$md) {
+							&:hover:not(:focus):not(.error){
+								outline-color: var(--color-primary);
+							}
+						}
+					
+						&:focus{
+							outline-color: var(--color-primary);
+						}
+				}
+			
 				&.error{
 					outline-color: var(--color-system-error);
 					outline-width: 2rem;
-					
 						& ~ .input-message.__error{
 							opacity: 1;
 						}
+				}
+			
+				&.warm{
+					outline-color: var(--color-system-warm);
+					outline-width: 2rem;
+						& ~ .input-message.__warm{
+							opacity: 1;
+						}
+				}
+			
+				&.success{
+					outline-color: var(--color-system-success);
+					outline-width: 2rem;
+						& ~ .input-message.__success{
+							opacity: 1;
+						}
+				}
+			
+				//checkbox
+				&[type="checkbox"]{
+					position: absolute;
+					width: 0;
+					height: 0;
+					top: 0;
+					left: 0;
+					
+						&:checked ~ .input-item-icon{
+							background-color: var(--color-primary);
+							border-color: var(--color-primary);
+								&:before{
+									opacity: 1;
+								}
+						}
+				}
+			
+				&-icon{
+					width: 24rem;
+					height: 24rem;
+					border: 2rem var(--color-gray-4) solid;
+					border-radius: 2px;
+					background-color: var(--color-white);
+					display: inline-block;
+					pointer-events: none;
+					overflow: hidden;
+					transition: background-color var(--duration) var(--ease), border-color var(--duration) var(--ease);
+					position: relative;
+					
+						&:before{
+							content: '';
+							position: absolute;
+							inset: 0;
+							background-repeat: no-repeat;
+							background-size: 16rem 12rem;
+							background-position: center;
+							background-image: url(../img/icons/check.svg);
+							opacity: 0;
+							transition: opacity var(--duration) var(--ease);
+						}
+				}
+			
+				&-title{
+					color: var(--color-black);
+					font: var(--font-body-xs-regular);
+					pointer-events: none;
 				}
 		}
 	
 		&-message{
 			position: absolute;
-			top: calc(100% + 3rem);
+			top: calc(100% + 8rem);
 			left: 0;
 			font: var(--font-body-xs-regular);
 			pointer-events: none;
 			opacity: 0;
 			transition: opacity var(--duration) var(--ease);
+			padding-left: 20rem;
+			
+				&:before{
+					content: '';
+					position: absolute;
+					top: 1rem;
+					left: 0;
+					width: 16rem;
+					height: 16rem;
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: center;
+					border-radius: 50%;
+					overflow: hidden;
+				}
 			
 				&.__error{
 					color: var(--color-system-error);
+						&:before{
+							background-image: url(../img/icons/attention.svg);
+						}
 				}
+			
+				&.__warm{
+					color: var(--color-system-warm);
+            &:before{
+              background-image: url(../img/icons/warn.svg);
+            }
+				}
+			
+				&.__success{
+					color: var(--color-system-success);
+            &:before{
+              background-image: url(../img/icons/success.svg);
+            }
+				}
+		}
+	
+		&-label{
+			font: var(--font-body-xs-medium);
+			color: var(--color-black);
 		}
 }

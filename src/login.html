@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/components/head.html', { title: "Login - International Association of Professional Security Consultants" })
+<body>
+<main id="wrapper">
+	@@include('html/components/header.html', {})
+	<section class="section auth">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-3">
+					@@include('html/pages/login/sidebar.html', {})
+				</div>
+				<div class="col-lg-8 offset-lg-1 col-md-9">
+					@@include('html/pages/login/form.html', {})
+				</div>
+			</div>
+		</div>
+	</section>
+	@@include('html/sections/events.html', {})
+	@@include('html/components/footer.html', {})
+</main>
+@@include('html/components/scripts.html')
+</body>
+</html>
