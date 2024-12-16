@@ -1,0 +1,17 @@
+@use '../settings/mixins';
+@use '../settings/variables';
+
+.attention-section{
+	background-color: var(--color-gray-7);
+	text-align: center;
+	padding: 8rem 0;
+	
+		//@include mixins.maxWidth(variables.$sm){
+		//	display: none;
+		//}
+	
+		p{
+			font: var(--font-body-xs-regular);
+			color: var(--color-gray-1);
+		}
+}

@@ -1,0 +1,101 @@
+@use "../../settings/mixins";
+@use "../../settings/variables";
+
+.board{
+	
+		&-item{
+			padding: 96rem 0;
+			
+				@include mixins.maxWidth(variables.$sm){
+					padding: 48rem 0;
+				}
+			
+				&-text{
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: center;
+					gap: 16rem;
+					max-width: 546rem;
+					height: 100%;
+					
+						@include mixins.maxWidth(variables.$sm){
+							padding-bottom: 40rem;
+						}
+				}
+				
+				&-banner{
+					border-radius: 32px;
+					overflow: hidden;
+					height: 420rem;
+					
+						img{
+							@include mixins.imageCover(center);
+						}
+					
+						@include mixins.maxWidth(variables.$sm){
+							height: 260rem;
+						}
+				}
+			
+				&:nth-child(even){
+					.row{
+						flex-direction: row-reverse;
+					}
+					
+					.board-item{
+							&-text{
+								margin-left: auto;
+							}
+					}
+				}
+			
+				&-title{
+					font: var(--font-heading-h1);
+					color: var(--color-black);
+					text-transform: capitalize;
+					
+						*{
+							@include mixins.maxWidth(variables.$sm){
+								word-break: break-word;
+							}
+						}
+				}
+			
+				&-description{
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 4;
+					overflow: hidden;
+					line-height: 1.35em;
+					
+						ul{
+							padding-top: 6rem;
+						}
+					
+						li{
+							position: relative;
+							padding-left: 27rem;
+							
+								&:before{
+									content: '';
+									position: absolute;
+									top: 10rem;
+									left: 11rem;
+									width: 4rem;
+									height: 4rem;
+									border-radius: 50%;
+									background-color: currentColor;
+								}
+						}
+				}
+			
+				&-action{
+					margin-top: 24rem;
+					
+						@include mixins.maxWidth(variables.$sm){
+							margin-top: 8rem;
+						}
+				}
+		}
+}

@@ -5,7 +5,7 @@
 		name="viewport"
 		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
 	/>
-	<title>Login - International Association of Professional Security Consultants</title>
+	<title>International Association of Professional Security Consultants</title>
 	
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
 	
@@ -121,80 +121,166 @@
 	  </div>
 	</div>
 </header>
-	<section class="section auth">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-md-3">
-					<div class="sidebar">
-	<p class="sidebar-label">Member directory</p>
-	<div class="sidebar-list">
+	<section class="section about-switcher">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-3">
+				<div class="sidebar">
+	<p class="sidebar-label">About</p>
+	<div class="sidebar-list" id="switcher-triggers">
 		<ul>
-			<li><a href="/login.html" class="active">Log In</a></li>
+			<li><button data-trigger="0">About</button></li>
+			<li><button data-trigger="1">History of the IAPSC</button></li>
+			<li><button data-trigger="2">IAPSC Committees</button></li>
+			<li><button data-trigger="3">IAPSC Code of Ethics</button></li>
+			<li><button data-trigger="4">IAPSC By-Laws</button></li>
+			<li>
+				<button data-trigger="5">IAPSC Officers & Directors</button>
+				<ul>
+					<li><button data-trigger="6">IAPSC Board of Directors Meetings Minutes</button></li>
+				</ul>
+			</li>
+			<li><button data-trigger="7">IAPSC Committees</button></li>
+			<li><button data-trigger="8">IAPSC Security Best Practices</button></li>
+			<li><button data-trigger="9">Evidence-Based Security Practices(EBSP)</button></li>
+			<li>
+				<button data-trigger="10">Becoming a Certified Security Consultant℠</button>
+				<ul>
+					<li><button data-trigger="11">Certified Security Consultant℠ Code of Ethics</button></li>
+					<li><button data-trigger="12">Testimonials</button></li>
+					<li><button data-trigger="13">Qualifications</button></li>
+					<li><button data-trigger="14">References</button></li>
+					<li><button data-trigger="15">Application and Fees</button></li>
+					<li><button data-trigger="16">Verification</button></li>
+					<li><button data-trigger="17">CSC℠ Recertification</button></li>
+				</ul>
+			</li>
 		</ul>
 	</div>
 </div>
-				</div>
-				<div class="col-lg-8 offset-lg-1 col-md-9">
-					<div class="plates">
-	<div class="plates-item">
-		<div class="plates-item-content auth-form">
-			<h3>Log In</h3>
-			<p>Please Log In to see more information</p>
-			<!--			for display error state add class "error" to auth-form-message			-->
-			<div class="auth-form-message">
-				<div class="auth-form-message-icon">
-					<img src="img/icons/attention.svg" alt="Fail login" />
-				</div>
-				<p class="auth-form-message-text">Log In failed. Username and password do not match or you do not have an account yet.</p>
 			</div>
-			<form>
-				<div class="form-row">
-					<label class="input-container">
-						<!--			for display error state add class "error" to input tag			-->
-						<!--			for display warm state add class "warm" to input tag			-->
-						<!--			for display success state add class "success" to input tag			-->
-						<span class="input-label">Username</span>
-						<input type="text" class="input-item sm" placeholder="Username" />
-						<span class="input-message __error">Username is required!</span>
-						<span class="input-message __warm">Warm message!</span>
-						<span class="input-message __success">Success message</span>
-					</label>
-					<label class="input-container">
-						<!--			for display error state add class "error" to input tag			-->
-						<!--			for display warm state add class "warm" to input tag			-->
-						<!--			for display success state add class "success" to input tag			-->
-						<span class="input-label">Password</span>
-						<input type="password" class="input-item sm" placeholder="Password" />
-						<span class="input-message __error">Password is required!</span>
-						<span class="input-message __warm">Warm message!</span>
-						<span class="input-message __success">Success message</span>
-					</label>
-				</div>
-				<label class="input-container-checkbox">
-					<input type="checkbox" class="input-item" />
-					<span class="input-item-icon"></span>
-					<span class="input-item-title">Remember me</span>
-				</label>
-				<!--		add class loading to btn to display animated spinner while form is submitting		-->
-				<button class="btn btn-lg">
-					<span class="btn-icon loading">
-						<img src="img/spinner.svg" alt="Loading...">
-					</span>
-					<span class="btn-label">Log In</span>
-				</button>
-				<p class="auth-form-more">Don’t you have an account? <a href="#">Sign In</a></p>
-			</form>
+			<div class="col-lg-8 offset-lg-1 col-md-9">
+				<div class="plates" id="switcher-plates">
+	<div class="plates-item" data-content="0">
+		<div class="plates-item-content">
+			<h3>About</h3>
+			<p>The International Association of Professional Security Consultants, Inc. is the most widely respected and recognized security consultant association in the industry. Its rigid membership requirements allow potential clients to select from a unique group of professional, ethical and competent security consultants. IAPSC members are not affiliated with any product or service they may recommend.</p>
+			
+			<p>The primary purpose of the IAPSC is to establish and maintain the highest industry standards for professionalism and ethical conduct. To locate an IAPSC security consultant, visit our
+				<a href="#" target="_blank">Find a Security Consultant</a> directory or our free
+				<a href="#" target="_blank">Security Consulting RFP Distribution</a> service.</p>
+			
+			<p>Prospective organization members can be confident that IAPSC membership will enhance their professional image. Each IAPSC security consultant is a recognized professional with a proven track record in their area of expertise.</p>
+			
+			<p>When your project requires one of the many security consulting services our members offer, such as: Security management</p>
+			
+			<ul>
+				<li>Physical security</li>
+				<li>Security systems</li>
+				<li>Information security</li>
+				<li>Security risk assessment</li>
+				<li>Security operations</li>
+				<li>Security training</li>
+			</ul>
+			
+			<p>… or any combination of these, you will receive quality performance from every member of our elite security association. See the full
+				<a href="#">list of security services</a> our members offer.</p>
+			
+			<p>In addition, with less organizational overhead, you find that when you use our free <a href="#">Security Consulting RFP Distribution</a> service that proposals from IAPSC teams are highly competitive.</p>
+			
+			<p>Would you like to become a member of the IAPSC? Please visit our <a href="#">“Become a Member”</a> page today.</p>
 		</div>
-		<div class="auth-form-details">
-			<a href="#">Forgot your password?</a>
-			<a href="#">Forgot your username?</a>
+	</div>
+	<div class="plates-item" data-content="1">
+		<div class="plates-item-content">
+			<h3>History of the IAPSC</h3>
+		</div>
+	</div>
+	<div class="plates-item" data-content="2">
+		<div class="plates-item-content">
+			<h3>IAPSC Committees</h3>
+		</div>
+	</div>
+	<div class="plates-item" data-content="3">
+		<div class="plates-item-content">
+			<h3>IAPSC Code of Ethics</h3>
+		</div>
+	</div>
+	<div class="plates-item" data-content="4">
+		<div class="plates-item-content">
+			<h3>IAPSC By-Laws</h3>
+		</div>
+	</div>
+	<div class="plates-item" data-content="5">
+		<div class="plates-item-content">
+			<h3>IAPSC Officers & Directors</h3>
+		</div>
+	</div>
+	<div class="plates-item" data-content="6">
+		<div class="plates-item-content">
+			<h3>IAPSC Board of Directors Meetings Minutes</h3>
+		</div>
+	</div>
+	<div class="plates-item" data-content="7">
+		<div class="plates-item-content">
+			<h3>IAPSC Committees</h3>
+		</div>
+	</div>
+	<div class="plates-item" data-content="8">
+		<div class="plates-item-content">
+			<h3>IAPSC Security Best Practices</h3>
+		</div>
+	</div>
+	<div class="plates-item" data-content="9">
+		<div class="plates-item-content">
+			<h3>Evidence-Based Security Practices (EBSP)</h3>
+		</div>
+	</div>
+	<div class="plates-item" data-content="10">
+		<div class="plates-item-content">
+			<h3>Becoming a Certified Security Consultant℠</h3>
+		</div>
+	</div>
+	<div class="plates-item" data-content="11">
+		<div class="plates-item-content">
+			<h3>Certified Security Consultant℠ Code of Ethics</h3>
+		</div>
+	</div>
+	<div class="plates-item" data-content="12">
+		<div class="plates-item-content">
+			<h3>Testimonials</h3>
+		</div>
+	</div>
+	<div class="plates-item" data-content="13">
+		<div class="plates-item-content">
+			<h3>Qualifications</h3>
+		</div>
+	</div>
+	<div class="plates-item" data-content="14">
+		<div class="plates-item-content">
+			<h3>References</h3>
+		</div>
+	</div>
+	<div class="plates-item" data-content="15">
+		<div class="plates-item-content">
+			<h3>Application and Fees</h3>
+		</div>
+	</div>
+	<div class="plates-item" data-content="16">
+		<div class="plates-item-content">
+			<h3>Verification</h3>
+		</div>
+	</div>
+	<div class="plates-item" data-content="17">
+		<div class="plates-item-content">
+			<h3>CSC℠ Recertification</h3>
 		</div>
 	</div>
 </div>
-				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
 	<section class="section home-events">
 	<div class="container">
 		<div class="abstract" data-order="8">

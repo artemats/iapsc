@@ -150,7 +150,12 @@
 		}
 	
 		& + .section{
-			margin-top: 132rem;
+			//margin-top: 132rem;
+			margin-top: 96rem;
+			
+				@include mixins.maxWidth(variables.$md){
+					margin-top: 80rem;
+				}
 			
 				@include mixins.maxWidth(variables.$sm){
 					margin-top: 72rem;
