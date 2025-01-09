@@ -1,0 +1,77 @@
+@use "../settings/mixins";
+
+.linkedin-post{
+	background-color: var(--color-gray-7);
+	border-radius: 8px;
+	padding: 24rem;
+	
+		&-header{
+			display: flex;
+			flex-direction: column;
+			gap: 8rem;
+			position: relative;
+			padding-right: 60rem;
+		}
+	
+		&-title{
+			color: var(--color-primary);
+			font: var(--font-body-s-semiBold);
+		}
+	
+		&-share{
+			width: 24rem;
+			height: 24rem;
+			right: 0;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			color: var(--color-gray-3);
+		}
+	
+		&-date{
+			color: var(--color-gray-3);
+			font: var(--font-body-xs-regular);
+		}
+	
+		&-thumb{
+			height: 320rem;
+			margin-top: 32rem;
+			
+				img{
+					@include mixins.imageCover(center);
+				}
+		}
+	
+		&-content{
+			background-color: var(--color-gray-6);
+			padding: 8rem;
+			display: flex;
+			flex-direction: column;
+			gap: 8rem;
+			margin-bottom: 32rem;
+		}
+	
+		&-description{
+			color: var(--color-gray-3);
+			font: var(--font-body-m-regular);
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3;
+			overflow: hidden;
+		}
+}
+
+.linkedin{
+		&-content{
+				&-title{
+					font: var(--font-body-l-medium);
+					line-height: 1.35em;
+					color: var(--color-black);
+				}
+				
+				&-url{
+					color: var(--color-gray-2);
+					font: var(--font-body-xs-regular);
+				}
+		}
+}

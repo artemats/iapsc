@@ -2,22 +2,25 @@
 @use "../settings/variables";
 
 .hero{
-	text-align: center;
 	padding: 96rem 0;
 	
 		@include mixins.maxWidth(variables.$sm){
-			padding: 50rem 0 48rem;
+			padding: 48rem 0;
 		}
 	
 		&-box{
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			gap: 24rem;
+			justify-content: flex-end;
+			align-items: flex-start;
+			gap: 16rem;
+			max-width: 546rem;
+			height: 100%;
 			
 				@include mixins.maxWidth(variables.$sm){
 					gap: 14rem;
+					align-items: center;
+					text-align: center;
 				}
 			
 				h1{
@@ -25,7 +28,7 @@
 				}
 			
 				.btn{
-					margin-top: 24rem;
+					margin-top: 32rem;
 					
 						@include mixins.maxWidth(variables.$sm){
 							margin-top: 10rem;
@@ -36,8 +39,7 @@
 		&-banner{
 			border-radius: 32px;
 			overflow: hidden;
-			height: 755rem;
-			margin-top: 63rem;
+			height: 418rem;
 			
 				@include mixins.maxWidth(variables.$sm){
 					height: 67vw;

@@ -29,7 +29,7 @@
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: flex-start;
-			gap: 17rem;
+			gap: 18rem;
 			
 				@include mixins.maxWidth(variables.$sm){
 					gap: 12rem;
