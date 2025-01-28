@@ -1,0 +1,47 @@
+@use "../../settings/mixins";
+
+.search-result-plate{
+	margin: 40rem 0 0;
+	padding: 48rem 48rem 26rem;
+	
+		.btn-back{
+			margin-bottom: 32rem;
+		}
+	
+		.table{
+			padding: 22rem 0;
+		}
+}
+
+.avatar{
+	display: inline-flex;
+	align-items: center;
+	gap: 12rem;
+	
+		&-thumb{
+			width: 40rem;
+			height: 40rem;
+			border-radius: 50%;
+			overflow: hidden;
+			background-color: var(--color-gray-3);
+			
+				img{
+					@include mixins.imageCover(center);
+				}
+		}
+	
+		&-detail{
+			
+				&-title{
+					font: var(--font-body-xs-medium);
+					color: var(--color-black);
+					margin: 0;
+				}
+			
+				&-subtitle{
+					font: var(--font-body-xs-regular);
+					color: var(--color-gray-3);
+					margin: 0;
+				}
+		}
+}

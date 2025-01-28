@@ -1,0 +1,125 @@
+<div class="plates">
+	<div class="plates-item">
+		<div class="plates-item-content auth-form">
+			<h3>Member Directory</h3>
+			<p>Please note: To view the entire directory, simply click the search button below.</p>
+			<form>
+				<div class="form-box">
+					<label class="input-container">
+						<!--			for display error state add class "error" to input tag			-->
+						<!--			for display warm state add class "warm" to input tag			-->
+						<!--			for display success state add class "success" to input tag			-->
+						<span class="input-label">First Name</span>
+						<input type="text" class="input-item sm" placeholder="First Name" />
+						<span class="input-message __error">First name is required!</span>
+						<span class="input-message __warm">Warm message!</span>
+						<span class="input-message __success">Success message</span>
+					</label>
+					<label class="input-container">
+						<!--			for display error state add class "error" to input tag			-->
+						<!--			for display warm state add class "warm" to input tag			-->
+						<!--			for display success state add class "success" to input tag			-->
+						<span class="input-label">Last Name</span>
+						<input type="text" class="input-item sm" placeholder="Last Name" />
+						<span class="input-message __error">Last Name is required!</span>
+						<span class="input-message __warm">Warm message!</span>
+						<span class="input-message __success">Success message</span>
+					</label>
+					<label class="input-container">
+						<!--			for display error state add class "error" to input tag			-->
+						<!--			for display warm state add class "warm" to input tag			-->
+						<!--			for display success state add class "success" to input tag			-->
+						<span class="input-label">Company</span>
+						<input type="text" class="input-item sm" placeholder="Company" />
+						<span class="input-message __error">Company is required!</span>
+						<span class="input-message __warm">Warm message!</span>
+						<span class="input-message __success">Success message</span>
+					</label>
+					<label class="input-container">
+						<!--			for display error state add class "error" to input tag			-->
+						<!--			for display warm state add class "warm" to input tag			-->
+						<!--			for display success state add class "success" to input tag			-->
+						<span class="input-label">City</span>
+						<input type="text" class="input-item sm" placeholder="City" />
+						<span class="input-message __error">City is required!</span>
+						<span class="input-message __warm">Warm message!</span>
+						<span class="input-message __success">Success message</span>
+					</label>
+					<label class="input-container">
+						<!--			for display error state add class "error" to input tag			-->
+						<!--			for display warm state add class "warm" to input tag			-->
+						<!--			for display success state add class "success" to input tag			-->
+						<span class="input-label">Select Country</span>
+						<select class="input-item sm" id="country">
+							<option selected disabled hidden>Select Country</option>
+						</select>
+						<span class="input-select-icon">
+							@@include('../../icons/arrow-select.html', {})
+						</span>
+						<span class="input-message __error">Country is required!</span>
+						<span class="input-message __warm">Warm message!</span>
+						<span class="input-message __success">Success message</span>
+					</label>
+					<label class="input-container disabled">
+						<!--			for display error state add class "error" to input tag			-->
+						<!--			for display warm state add class "warm" to input tag			-->
+						<!--			for display success state add class "success" to input tag			-->
+						<span class="input-label">State</span>
+						<select class="input-item sm" id="state">
+							<option value="Company" selected disabled>Select country first</option>
+						</select>
+						<span class="input-select-icon">
+							@@include('../../icons/arrow-select.html', {})
+						</span>
+						<span class="input-message __error">State is required!</span>
+						<span class="input-message __warm">Warm message!</span>
+						<span class="input-message __success">Success message</span>
+					</label>
+					<label class="input-container w-full">
+						<!--			for display error state add class "error" to input tag			-->
+						<!--			for display warm state add class "warm" to input tag			-->
+						<!--			for display success state add class "success" to input tag			-->
+						<span class="input-label">Services</span>
+						<select class="input-item sm" id="services">
+							<option value="Any Services" selected disabled>Any Services</option>
+							<option value="Service 1">Service 1</option>
+							<option value="Service 2">Service 2</option>
+							<option value="Service 3">Service 3</option>
+						</select>
+						<span class="input-select-icon">
+							@@include('../../icons/arrow-select.html', {})
+						</span>
+						<span class="input-message __error">Services is required!</span>
+						<span class="input-message __warm">Warm message!</span>
+						<span class="input-message __success">Success message</span>
+					</label>
+					<label class="input-container w-full">
+						<!--			for display error state add class "error" to input tag			-->
+						<!--			for display warm state add class "warm" to input tag			-->
+						<!--			for display success state add class "success" to input tag			-->
+						<span class="input-label">Industries</span>
+						<select class="input-item sm" id="industries">
+							<option value="Any Industries" selected disabled>Any Industries</option>
+							<option value="Industry 1">Industry 1</option>
+							<option value="Industry 2">Industry 2</option>
+							<option value="Industry 3">Industry 3</option>
+						</select>
+						<span class="input-select-icon">
+							@@include('../../icons/arrow-select.html', {})
+						</span>
+						<span class="input-message __error">Services is required!</span>
+						<span class="input-message __warm">Warm message!</span>
+						<span class="input-message __success">Success message</span>
+					</label>
+				</div>
+				<!--		add class loading to btn to display animated spinner while form is submitting		-->
+				<button class="btn btn-lg">
+					<span class="btn-icon loading">
+						<img src="img/spinner.svg" alt="Loading...">
+					</span>
+					<span class="btn-label">Search</span>
+				</button>
+			</form>
+		</div>
+	</div>
+</div>

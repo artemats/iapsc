@@ -1,0 +1,20 @@
+@use "../../settings/mixins";
+@use "../../settings/variables";
+
+.form-box{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24rem;
+	
+		.input-container{
+			width: calc(50% - 12rem);
+			
+				@include mixins.maxWidth(variables.$sm){
+					width: 100%;
+				}
+			
+				&.w-full{
+					width: 100%;
+				}
+		}
+}

@@ -89,6 +89,22 @@
 				}
 		}
 	
+		&-back{
+			color: var(--color-secondary);
+			
+			@include mixins.hover(variables.$md){
+				&:hover {
+					color: var(--color-primary-light);
+				}
+			}
+			
+				.btn{
+						&-icon{
+							transform: scaleX(-1);
+						}
+				}
+		}
+	
 		/* Colors */
 		&-white{
 			background-color: var(--color-white);
@@ -136,6 +152,17 @@
 				svg{
 					width: 100%;
 					height: 100%;
+				}
+		}
+	
+		&-simple{
+			padding: 4rem;
+			width: 40rem;
+			height: 40rem;
+			
+				.btn-icon{
+					width: 24rem;
+					height: 24rem;
 				}
 		}
 		
