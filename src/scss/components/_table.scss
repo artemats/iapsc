@@ -41,6 +41,7 @@
 				}
 			
 				tr{
+					position: relative;
 					
 						&:nth-child(odd){
 							td{
@@ -60,24 +61,64 @@
 					color: var(--color-gray-3);
 					font: var(--font-body-xs-regular);
 					
+						@include mixins.maxWidth(variables.$sm){
+							padding: 0 64rem;
+						}
+					
 						&:nth-child(1){
 							border-radius: 4px 0 0 4px;
+							
+								@include mixins.maxWidth(variables.$sm){
+									padding-top: 12rem;
+									border-radius: 4px 4px 0 0;
+								}
 						}
 						
 						&:last-child{
 							border-radius: 0 4px 4px 0;
 							text-align: center;
+							
+								@include mixins.maxWidth(variables.$sm){
+									padding-bottom: 12rem;
+									border-radius: 0 0 4px 4px;
+								}
+						}
+				}
+			
+				thead{
+						@include mixins.maxWidth(variables.$sm){
+							display: none;
+						}
+				}
+				
+				tbody{
+						tr{
+							@include mixins.maxWidth(variables.$sm){
+								display: flex;
+								flex-direction: column;
+							}
 						}
 				}
 			
 				.btn-simple{
 					color: var(--color-white);
+					
+					@include mixins.maxWidth(variables.$sm){
+						position: absolute;
+						top: 12rem;
+						right: 12rem;
+					}
 				}
 		}
 	
 		&-control{
 			display: flex;
 			justify-content: space-between;
+			
+				@include mixins.maxWidth(variables.$sm){
+					flex-direction: column;
+					gap: 24rem;
+				}
 			
 				.input{
 						&-item{
@@ -101,6 +142,12 @@
 							color: var(--color-secondary);
 						}
 				}
+		}
+	
+		.avatar{
+			@include mixins.maxWidth(variables.$sm){
+				margin-left: -52rem;
+			}
 		}
 }
 

@@ -5,6 +5,11 @@
 	display: flex;
 	gap: 12rem;
 	
+		@include mixins.maxWidth(variables.$sm){
+			gap: 5rem;
+			justify-content: space-between;
+		}
+	
 		&-link{
 			width: 40rem;
 			height: 40rem;

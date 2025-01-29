@@ -1,0 +1,17 @@
+@use "../../settings/mixins";
+@use "../../settings/variables";
+@use "../../pages/login/section";
+
+.member{
+	@extend .auth;
+	
+		&-search{
+			padding-left: 32rem;
+			margin-top: -40rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					margin-top: -20rem;
+					padding-left: 0;
+				}
+		}
+}

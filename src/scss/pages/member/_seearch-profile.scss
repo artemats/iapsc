@@ -1,0 +1,78 @@
+@use "../../settings/mixins";
+@use "../../settings/variables";
+
+.profile{
+	display: flex;
+	gap: 64rem;
+	padding: 24rem 0 6rem;
+	
+		@include mixins.maxWidth(variables.$sm){
+			flex-direction: column;
+			padding: 27rem 0 0;
+			gap: 24rem;
+		}
+	
+		&-thumb{
+			width: 280rem;
+			min-width: 280rem;
+			height: 280rem;
+			border-radius: 4px;
+			overflow: hidden;
+			
+				@include mixins.maxWidth(variables.$sm){
+					width: 326rem;
+					height: 326rem;
+				}
+			
+				img{
+					@include mixins.imageCover(center);
+				}
+		}
+	
+		&-content{
+			margin-top: -14rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					margin-top: 0;
+				}
+			
+				&-row{
+					display: flex;
+					gap: 24rem;
+					padding: 16rem 0;
+					position: relative;
+					
+						@include mixins.maxWidth(variables.$md){
+							flex-direction: column;
+							gap: 15rem;
+						}
+					
+						&:not(:last-child){
+							&:before{
+								content: '';
+								position: absolute;
+								left: 0;
+								bottom: 0;
+								height: 1px;
+								right: 0;
+								background-color: var(--color-gray-6);
+							}
+						}
+				}
+		}
+	
+		&-label{
+			color: var(--color-gray-3);
+			min-width: 200rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					font: var(--font-body-m-regular);
+				}
+		}
+		
+		&-detail{
+			@include mixins.maxWidth(variables.$sm){
+				font: var(--font-body-m-regular);
+			}
+		}
+}

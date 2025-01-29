@@ -6,8 +6,16 @@
 	@@include('html/components/header.html', {})
 	<section class="section member">
 		<div class="container">
-			<p class="sidebar-label">Member portal</p>
-			@@include('html/pages/member/search-form.html', {})
+			<div class="row">
+				<div class="col-md-3">
+					@@include('html/pages/login/sidebar.html', {})
+				</div>
+				<div class="col-md-9">
+					<div class="member-search">
+						@@include('html/pages/member/search-form.html', {})
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 	@@include('html/sections/linkedin.html', {})
