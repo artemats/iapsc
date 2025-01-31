@@ -162,4 +162,26 @@
 			transform: translateY(-50%);
 			right: -60rem;
 		}
+	
+		&[data-order="14"]{
+			width: 168rem;
+			height: 121rem;
+			top: 47%;
+			left: 17%;
+			
+				@include mixins.maxWidth(variables.$sm){
+					display: none;
+				}
+		}
+	
+		&[data-order="15"]{
+			width: 411rem;
+			height: 411rem;
+			left: 9.5%;
+			bottom: -480rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					bottom: -380rem;
+				}
+		}
 }

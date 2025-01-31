@@ -1,0 +1,16 @@
+@use "../../settings/mixins";
+@use "../../settings/variables";
+
+.hero-about-detail{
+
+		.hero-box{
+			justify-content: center;
+			padding-bottom: 30rem;
+			
+				@include mixins.maxWidth(variables.$sm){
+					text-align: left;
+					align-items: flex-start;
+					padding-bottom: 0;
+				}
+		}
+}
