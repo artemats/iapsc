@@ -37,9 +37,22 @@
 			border-radius: 50%;
 			overflow: hidden;
 			background-color: var(--color-gray-3);
+			position: relative;
+			
+				&-initials{
+					position: absolute;
+					inset: 0;
+					color: var(--color-black);
+					text-transform: uppercase;
+					line-height: 40rem;
+					text-align: center;
+					pointer-events: none;
+				}
 			
 				img{
 					@include mixins.imageCover(center);
+					position: relative;
+					z-index: 1;
 				}
 		}
 	
