@@ -43,6 +43,28 @@
 								cursor: pointer;
 							}
 						}
+					
+						&[data-sort-by="asc"]{
+							color: var(--color-black);
+								.sort{
+										path{
+											&:nth-child(1){
+												fill: var(--color-black);
+											}
+										}
+								}
+						}
+						
+						&[data-sort-by="desc"]{
+							color: var(--color-black);
+								.sort{
+										path{
+											&:nth-child(2){
+												fill: var(--color-black);
+											}
+										}
+								}
+						}
 				}
 			
 				tr{
@@ -172,21 +194,5 @@
 	
 		path{
 			transition: all var(--duration) var(--ease);
-		}
-	
-		&[data-sort-by="asc"]{
-			path{
-				&:nth-child(1){
-					fill: var(--color-black);
-				}
-			}
-		}
-	
-		&[data-sort-by="desc"]{
-			path{
-				&:nth-child(2){
-					fill: var(--color-black);
-				}
-			}
 		}
 }
