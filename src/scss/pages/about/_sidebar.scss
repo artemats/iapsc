@@ -9,7 +9,7 @@
 		}
 	
 		&-label{
-			color: var(--color-primary);
+			color: var(--color-secondary);
 			text-transform: uppercase;
 			font: var(--font-body-s-medium);
 		}
@@ -44,7 +44,7 @@
 					
 						&.active{
 							color: var(--color-white);
-							background-color: var(--color-secondary);
+							background-color: var(--color-primary-light);
 						}
 					
 						@include mixins.maxWidth(variables.$sm){

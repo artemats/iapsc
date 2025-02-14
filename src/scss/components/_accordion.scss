@@ -1,0 +1,70 @@
+@use "../settings/mixins";
+@use "../settings/variables";
+
+.accordion{
+	position: relative;
+	padding: 10rem 0;
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	
+		&-item{
+			display: flex;
+			flex-direction: column;
+			background-color: var(--color-gray-7);
+			border-radius: 4px;
+			padding: 8rem 16rem;
+			
+				&-header{
+					position: relative;
+					color: var(--color-black);
+					font: var(--font-body-m-medium);
+					padding: 4rem 20rem 4rem 0;
+					
+						@include mixins.hover(variables.$md){
+							&:hover{
+								cursor: pointer;
+							}
+						}
+					
+						&:before,
+						&:after{
+							content: '';
+							position: absolute;
+							background-color: var(--color-primary-light);
+							width: 3rem;
+							height: 15rem;
+							right: 8rem;
+							top: 10rem;
+							pointer-events: none;
+							transition: transform var(--duration) var(--ease);
+						}
+					
+						&:after{
+							transform: rotate(90deg);
+						}
+				}
+				
+				&-body{
+					color: var(--color-gray-2);
+					overflow: hidden;
+					opacity: 0;
+					max-height: 0;
+					transition: max-height var(--duration) var(--ease), margin var(--duration) var(--ease);
+				}
+			
+				&.active{
+					.accordion-item{
+							&-header{
+								&:before{
+									transform: rotate(90deg);
+								}
+							}
+							&-body{
+								opacity: 1;
+								margin-top: 8rem;
+							}
+					}
+				}
+		}
+}
