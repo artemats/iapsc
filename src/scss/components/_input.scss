@@ -143,12 +143,12 @@
 					
 						@include mixins.hover(variables.$md) {
 							&:hover:not(:focus):not(.error){
-								outline-color: var(--color-primary-light);
+								outline-color: var(--color-primary);
 							}
 						}
 					
 						&:focus{
-							outline-color: var(--color-primary-light);
+							outline-color: var(--color-primary);
 						}
 				}
 			
@@ -185,8 +185,8 @@
 					left: 0;
 					
 						&:checked ~ .input-item-icon{
-							background-color: var(--color-primary-light);
-							border-color: var(--color-primary-light);
+							background-color: var(--color-primary);
+							border-color: var(--color-primary);
 								&:before{
 									opacity: 1;
 								}

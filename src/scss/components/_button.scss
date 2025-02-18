@@ -8,8 +8,8 @@
 	text-align: center;
 	font: var(--font-button);
 	text-decoration: none;
-	border: 2rem var(--color-primary-light) solid;
-	background-color: var(--color-primary-light);
+	border: 2rem var(--color-primary) solid;
+	background-color: var(--color-primary);
 	padding: 0 14rem;
 	height: 40rem;
 	line-height: 38rem;
@@ -45,7 +45,7 @@
 		// variants
 		&-outline{
 			background-color: transparent;
-			color: var(--color-primary-light);
+			color: var(--color-primary);
 			
 				@include mixins.hover(variables.$md){
 					&:hover{
@@ -68,7 +68,7 @@
 		&-link{
 			padding: 0;
 			background-color: transparent;
-			color: var(--color-primary-light);
+			color: var(--color-primary);
 			line-height: 24rem;
 			height: auto;
 			border: none;
@@ -90,11 +90,11 @@
 		}
 	
 		&-back{
-			color: var(--color-primary-light);
+			color: var(--color-primary);
 			
 				@include mixins.hover(variables.$md){
 					&:hover {
-						color: var(--color-primary);
+						color: var(--color-secondary);
 					}
 				}
 			
@@ -109,7 +109,7 @@
 		&-white{
 			background-color: var(--color-white);
 			border-color: var(--color-white);
-			color: var(--color-primary-light);
+			color: var(--color-primary);
 			
 				@include mixins.hover(variables.$md){
 					&:hover{

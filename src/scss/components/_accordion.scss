@@ -21,12 +21,6 @@
 					font: var(--font-body-m-medium);
 					padding: 4rem 20rem 4rem 0;
 					
-						@include mixins.hover(variables.$md){
-							&:hover{
-								cursor: pointer;
-							}
-						}
-					
 						&:before,
 						&:after{
 							content: '';
@@ -37,11 +31,22 @@
 							right: 8rem;
 							top: 10rem;
 							pointer-events: none;
-							transition: transform var(--duration) var(--ease);
+							transition: transform var(--duration) var(--ease), background-color var(--duration) var(--ease);
 						}
 					
 						&:after{
 							transform: rotate(90deg);
+						}
+					
+						@include mixins.hover(variables.$md){
+							&:hover{
+								cursor: pointer;
+								
+									&:before,
+									&:after{
+										background-color: var(--color-secondary);
+									}
+							}
 						}
 				}
 				
