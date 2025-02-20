@@ -1,0 +1,42 @@
+.section-application{
+		h1, h2, h3, h4, h5, h6{
+			margin-bottom: 24rem;
+		}
+	
+		h5{
+			color: var(--color-primary);
+			margin: 24rem 0 0;
+		}
+	
+		h6{
+			color: var(--color-primary);
+			margin: 16rem 0;
+		}
+	
+		a:not([class]){
+			color: var(--color-primary);
+			text-decoration: underline;
+		}
+		
+		p{
+			&:not(:last-child){
+				margin-bottom: 16rem;
+			}
+		}
+	
+		.input-item{
+				&-title {
+					color: var(--color-gray-3);
+					font: var(--font-body-s-regular);
+					
+						strong {
+							color: var(--color-primary);
+							font: var(--font-body-s-semiBold);
+						}
+				}
+			
+				&-icon{
+					margin-top: 2rem;
+				}
+		}
+}

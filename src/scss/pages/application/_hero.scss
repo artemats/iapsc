@@ -1,0 +1,14 @@
+.hero-application{
+	padding: 64rem 0;
+	color: var(--color-gray-3);
+	
+		&-actions{
+			display: flex;
+			gap: 16rem;
+			padding: 24rem 0;
+		}
+	
+		p + h6{
+			margin-top: 24rem;
+		}
+}

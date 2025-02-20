@@ -1,0 +1,224 @@
+<section class="section section-application">
+	<div class="container">
+		<div class="section-application-plate">
+			<h3>Payment options</h3>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="fieldset-detail">
+						<p>Preferred Mailing Address <span>*</span></p>
+					</div>
+					<div class="fieldset-row">
+						<label class="input-container-radio">
+							<input type="radio" class="input-item radio-switcher-control" value="payment-type-0" checked name="payment-type" />
+							<span class="input-item-icon"></span>
+							<span class="input-item-title">Credit Card</span>
+						</label>
+						<label class="input-container-radio">
+							<input type="radio" class="input-item radio-switcher-control" value="payment-type-1" name="payment-type" />
+							<span class="input-item-icon"></span>
+							<span class="input-item-title">Business</span>
+						</label>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="fieldset-detail">
+						<p>Amount Due</p>
+					</div>
+					<div class="fieldset-row">
+						<label class="input-container-radio">
+							<input type="radio" class="input-item" name="payment-amount" checked />
+							<span class="input-item-icon"></span>
+							<span class="input-item-title">Application Fee - $ 200.00</span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="radio-switcher">
+				<div class="radio-switcher-item" data-switch-id="payment-type-0">
+					<h3>Credit card</h3>
+					<div class="input-fields mb-32">
+						<div class="row">
+							<div class="col-md-6">
+								<label class="input-container">
+									<!--			for display error state add class "error" to input tag			-->
+									<!--			for display warm state add class "warm" to input tag			-->
+									<!--			for display success state add class "success" to input tag			-->
+									<span class="input-label">Card Number <span>*</span></span>
+									<input type="text" class="input-item sm" placeholder="Number" />
+									<span class="input-message __error">Card number is required!</span>
+									<span class="input-message __warm">Warm message!</span>
+									<span class="input-message __success">Success message</span>
+								</label>
+							</div>
+							<div class="col-md-6">
+								<label class="input-container">
+									<!--			for display error state add class "error" to input tag			-->
+									<!--			for display warm state add class "warm" to input tag			-->
+									<!--			for display success state add class "success" to input tag			-->
+									<span class="input-label">Secure Code <span>*</span></span>
+									<input type="text" class="input-item sm" placeholder="Code" />
+									<span class="input-message __error">Secure is required!</span>
+									<span class="input-message __warm">Warm message!</span>
+									<span class="input-message __success">Success message</span>
+								</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<label class="input-container w-full">
+									<!--			for display error state add class "error" to input tag			-->
+									<!--			for display warm state add class "warm" to input tag			-->
+									<!--			for display success state add class "success" to input tag			-->
+									<span class="input-label">Expiration Date <span>*</span></span>
+									<select class="input-item sm">
+										<option selected disabled>Month</option>
+										<option value="January">January</option>
+										<option value="February">February</option>
+										<option value="March">March</option>
+										<option value="April">April</option>
+										<option value="May">May</option>
+										<option value="June">June</option>
+										<option value="July">July</option>
+										<option value="August">August</option>
+										<option value="September">September</option>
+										<option value="October">October</option>
+										<option value="November">November</option>
+										<option value="December">December</option>
+									</select>
+									<span class="input-select-icon">
+										@@include('../../icons/arrow-select.html', {})
+									</span>
+									<span class="input-message __error">Individual prefix is required!</span>
+									<span class="input-message __warm">Warm message!</span>
+									<span class="input-message __success">Success message</span>
+								</label>
+							</div>
+							<div class="col-md-6">
+								<label class="input-container">
+									<!--			for display error state add class "error" to input tag			-->
+									<!--			for display warm state add class "warm" to input tag			-->
+									<!--			for display success state add class "success" to input tag			-->
+									<span class="input-label">Expiration Year <span>*</span></span>
+									<input type="text" class="input-item sm" placeholder="Year" />
+									<span class="input-message __error">Expiration year is required!</span>
+									<span class="input-message __warm">Warm message!</span>
+									<span class="input-message __success">Success message</span>
+								</label>
+							</div>
+						</div>
+						<label class="input-container-checkbox">
+							<input type="checkbox" class="input-item" name="billing-address" />
+							<span class="input-item-icon"></span>
+							<span class="input-item-title"><strong>My billing address is the same as above</strong></span>
+						</label>
+					</div>
+					<h3>Billing Name and Address</h3>
+					<div class="input-fields">
+						<div class="row">
+							<div class="col-md-6">
+								<label class="input-container">
+									<!--			for display error state add class "error" to input tag			-->
+									<!--			for display warm state add class "warm" to input tag			-->
+									<!--			for display success state add class "success" to input tag			-->
+									<span class="input-label">Billing First Name <span>*</span></span>
+									<input type="text" class="input-item sm" placeholder="Billing First Name" />
+									<span class="input-message __error">Billing first name is required!</span>
+									<span class="input-message __warm">Warm message!</span>
+									<span class="input-message __success">Success message</span>
+								</label>
+							</div>
+							<div class="col-md-6">
+								<label class="input-container">
+									<!--			for display error state add class "error" to input tag			-->
+									<!--			for display warm state add class "warm" to input tag			-->
+									<!--			for display success state add class "success" to input tag			-->
+									<span class="input-label">Billing Last Name <span>*</span></span>
+									<input type="text" class="input-item sm" placeholder="Billing Last Name" />
+									<span class="input-message __error">Billing last name is required!</span>
+									<span class="input-message __warm">Warm message!</span>
+									<span class="input-message __success">Success message</span>
+								</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<label class="input-container">
+									<!--			for display error state add class "error" to input tag			-->
+									<!--			for display warm state add class "warm" to input tag			-->
+									<!--			for display success state add class "success" to input tag			-->
+									<span class="input-label">Street Address <span>*</span></span>
+									<input type="text" class="input-item sm" placeholder="Street Address" />
+									<span class="input-message __error">Street address is required!</span>
+									<span class="input-message __warm">Warm message!</span>
+									<span class="input-message __success">Success message</span>
+								</label>
+							</div>
+							<div class="col-md-6">
+								<label class="input-container">
+									<!--			for display error state add class "error" to input tag			-->
+									<!--			for display warm state add class "warm" to input tag			-->
+									<!--			for display success state add class "success" to input tag			-->
+									<span class="input-label">City <span>*</span></span>
+									<input type="text" class="input-item sm" placeholder="City" />
+									<span class="input-message __error">City is required!</span>
+									<span class="input-message __warm">Warm message!</span>
+									<span class="input-message __success">Success message</span>
+								</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<label class="input-container">
+									<!--			for display error state add class "error" to input tag			-->
+									<!--			for display warm state add class "warm" to input tag			-->
+									<!--			for display success state add class "success" to input tag			-->
+									<span class="input-label">Select Country</span>
+									<select class="input-item sm" id="country">
+										<option selected disabled hidden>Select Country</option>
+									</select>
+									<span class="input-select-icon">
+										@@include('../../icons/arrow-select.html', {})
+									</span>
+									<span class="input-message __error">Country is required!</span>
+									<span class="input-message __warm">Warm message!</span>
+									<span class="input-message __success">Success message</span>
+								</label>
+							</div>
+							<div class="col-md-6">
+								<label class="input-container disabled">
+									<!--			for display error state add class "error" to input tag			-->
+									<!--			for display warm state add class "warm" to input tag			-->
+									<!--			for display success state add class "success" to input tag			-->
+									<span class="input-label">State</span>
+									<select class="input-item sm" id="state">
+										<option value="Company" selected disabled>Select country first</option>
+									</select>
+									<span class="input-select-icon">
+										@@include('../../icons/arrow-select.html', {})
+									</span>
+									<span class="input-message __error">State is required!</span>
+									<span class="input-message __warm">Warm message!</span>
+									<span class="input-message __success">Success message</span>
+								</label>
+							</div>
+						</div>
+						<label class="input-container">
+							<!--			for display error state add class "error" to input tag			-->
+							<!--			for display warm state add class "warm" to input tag			-->
+							<!--			for display success state add class "success" to input tag			-->
+							<span class="input-label">Postal code</span>
+							<input type="text" class="input-item sm" placeholder="Postal code" />
+							<span class="input-message __error">Postal code is required!</span>
+							<span class="input-message __warm">Warm message!</span>
+							<span class="input-message __success">Success message</span>
+						</label>
+					</div>
+				</div>
+				<div class="radio-switcher-item" data-switch-id="payment-type-1"></div>
+			</div>
+			<button class="btn btn-lg w-full mt-32">
+				<span class="btn-label">Review your contribution</span>
+			</button>
+		</div>
+	</div>
+</section>

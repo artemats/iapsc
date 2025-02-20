@@ -25,6 +25,37 @@
 						}
 				}
 			
+				&-radio{
+					@extend .input-container;
+					flex-direction: row;
+					gap: 16rem;
+					
+						@include mixins.hover(variables.$md){
+							&:hover{
+								cursor: pointer;
+							}
+						}
+					
+						.input-item{
+							
+								&-icon{
+									border-radius: 50%;
+									background-color: transparent;
+									width: 17rem;
+									height: 17rem;
+									min-width: 17rem;
+									border-width: 1rem;
+									
+										&:before{
+											background-image: none;
+											inset: 2rem;
+											background-color: var(--color-primary);
+											border-radius: 50%;
+										}
+								}
+						}
+				}
+			
 				&.disabled{
 					pointer-events: none;
 					color: var(--color-gray-5);
@@ -187,8 +218,30 @@
 						&:checked ~ .input-item-icon{
 							background-color: var(--color-primary);
 							border-color: var(--color-primary);
+							
 								&:before{
 									opacity: 1;
+								}
+						}
+				}
+			
+				&[type="radio"]{
+					position: absolute;
+					width: 0;
+					height: 0;
+					top: 0;
+					left: 0;
+					
+						&:checked ~ .input-item{
+								&-title{
+									color: var(--color-primary);
+								}
+								&-icon{
+									border-color: var(--color-primary);
+									
+										&:before{
+											opacity: 1;
+										}
 								}
 						}
 				}
@@ -196,6 +249,7 @@
 				&-icon{
 					width: 24rem;
 					height: 24rem;
+					min-width: 24rem;
 					border: 2rem var(--color-gray-4) solid;
 					border-radius: 2px;
 					background-color: var(--color-white);
@@ -222,6 +276,73 @@
 					color: var(--color-black);
 					font: var(--font-body-xs-regular);
 					pointer-events: none;
+					transition: color var(--duration) var(--ease);
+				}
+		}
+	
+		&-textarea{
+			@extend .input-item;
+			padding-top: 12rem;
+			height: 92rem;
+		}
+	
+		&-file{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 0;
+		}
+	
+		&-draggzone{
+			display: flex;
+			flex-direction: column;
+			gap: 8rem;
+			align-items: center;
+			justify-content: center;
+			font: var(--font-body-xs-medium);
+			height: 132rem;
+			border-radius: 8px;
+			background-color: var(--color-white);
+			border: 1rem #646464 dashed;
+			position: relative;
+			transition: all var(--duration) var(--ease);
+			
+				@include mixins.hover(variables.$md){
+					&:hover{
+						cursor: pointer;
+						border-color: var(--color-gray-5);
+					}
+				}
+			
+				&-title{
+					color: var(--color-black);
+					display: inline-flex;
+					align-items: center;
+					gap: 13rem;
+					
+						svg{
+							width: 24rem;
+							height: 24rem;
+						}
+				}
+				
+				&-detail{
+					color: var(--color-gray-3);
+					max-width: 510rem;
+					margin: 0 auto;
+					text-align: center;
+				}
+			
+				&-filename{
+					color: var(--color-black);
+					max-width: 510rem;
+					margin: 0 auto;
+					text-align: center;
+					
+						&:empty{
+							display: none;
+						}
 				}
 		}
 	
@@ -293,5 +414,9 @@
 		&-label{
 			font: var(--font-body-xs-medium);
 			color: var(--color-black);
+			
+				span{
+					color: var(--color-secondary);
+				}
 		}
 }

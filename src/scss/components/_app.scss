@@ -110,3 +110,71 @@
 				}
 		}
 }
+
+.fieldset{
+	
+		&-detail{
+			color: var(--color-black);
+			font: var(--font-body-xs-medium);
+			margin-bottom: 8rem;
+			
+				span{
+					color: var(--color-secondary);
+				}
+		}
+	
+		&-row{
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			gap: 70rem;
+			
+				.input-container-radio{
+					width: auto;
+				}
+		}
+}
+
+.radio-switcher{
+	padding-top: 32rem;
+	
+		&-item{
+			display: none;
+		}
+}
+
+.w{
+		&-full{
+			width: 100%;
+		}
+}
+
+$spacings: 8, 16, 24, 32;
+
+@each $spacing in $spacings {
+	.mt-#{$spacing} {
+		margin-top: #{$spacing}rem;
+	}
+	.mb-#{$spacing} {
+    margin-bottom: #{$spacing}rem;
+  }
+	.mr-#{$spacing} {
+    margin-right: #{$spacing}rem;
+  }
+	.ml-#{$spacing} {
+    margin-left: #{$spacing}rem;
+  }
+	
+	.pt-#{$spacing} {
+		padding-top: #{$spacing}rem;
+	}
+	.pb-#{$spacing} {
+    padding-bottom: #{$spacing}rem;
+  }
+	.pl-#{$spacing} {
+		padding-left: #{$spacing}rem;
+	}
+	.pr-#{$spacing} {
+    padding-right: #{$spacing}rem;
+  }
+}

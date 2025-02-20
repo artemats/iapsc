@@ -1,0 +1,65 @@
+<section class="section section-application">
+	<div class="container">
+		<div class="section-application-plate">
+			<h3>Professional Data</h3>
+			<div class="fieldset-detail">
+				<p>Education Requirements <span>*</span></p>
+			</div>
+			<fieldset>
+				<label class="input-container-radio">
+					<input type="radio" class="input-item" name="education-requirements" />
+					<span class="input-item-icon"></span>
+					<span class="input-item-title"><strong>Higher Education:</strong> A baccalaureate or higher degree from an accredited college or university.</span>
+				</label>
+				<label class="input-container-radio">
+					<input type="radio" class="input-item" name="education-requirements" />
+					<span class="input-item-icon"></span>
+					<span class="input-item-title"><strong>Experience:</strong> Eight years of direct, broad security experience.</span>
+				</label>
+				<label class="input-container-radio">
+					<input type="radio" class="input-item" name="education-requirements" />
+					<span class="input-item-icon"></span>
+					<span class="input-item-title"><strong>Certification:</strong> One of the following certifications: Certified Protection Professional, Physical Security Professional, Certified Security Consultant℠, Certified Information Security Systems Professionals, Other certifications (accepted at the discretion of the Membership Committee)</span>
+				</label>
+			</fieldset>
+			<p>List all undergraduate and graduate degrees held. For each degree, provide the following: College/University Name, Location, Years Attended, Degree Awarded.</p>
+			<fieldset class="input-fields">
+				<label class="input-container">
+					<!--			for display error state add class "error" to input tag			-->
+					<!--			for display warm state add class "warm" to input tag			-->
+					<!--			for display success state add class "success" to input tag			-->
+					<span class="input-label">Higher Education <span>*</span></span>
+					<textarea type="text" class="input-textarea" placeholder="Text"></textarea>
+					<span class="input-message __error">First name is required!</span>
+					<span class="input-message __warm">Warm message!</span>
+					<span class="input-message __success">Success message</span>
+				</label>
+				<label class="input-container">
+					<span class="input-label">Upload your Transcript Request Verification</span>
+					<input type="file" class="input-file" />
+					<span class="input-draggzone">
+						<span class="input-draggzone-title">
+							@@include('../../icons/upload.html', {})
+							Add file
+						</span>
+						<span class="input-draggzone-detail">Please request your college or university to send a true copy of your transcript (highest degree only) directly to the IAPSC and upload a copy of the request here.</span>
+						<span class="input-draggzone-filename"></span>
+					</span>
+				</label>
+				<label class="input-container">
+					<span class="input-label">Upload your Documentation of Certification <span>*</span></span>
+					<input type="file" class="input-file" />
+					<span class="input-draggzone">
+						<span class="input-draggzone-title">
+							@@include('../../icons/upload.html', {})
+							Add file
+						</span>
+						<span class="input-draggzone-detail">Please upload verification of your current certification
+(e.g. copy of a certificate, letter, or reference list).</span>
+						<span class="input-draggzone-filename"></span>
+					</span>
+				</label>
+			</fieldset>
+		</div>
+	</div>
+</section>

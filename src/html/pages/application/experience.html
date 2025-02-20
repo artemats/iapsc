@@ -1,0 +1,43 @@
+<section class="section section-application">
+	<div class="container">
+		<div class="section-application-plate">
+			<h3>Experience</h3>
+			<p>Additionally, be ready to pay the APPLICATION FEE $200 USD. You will be given the option to pay online with a credit card or mail in a check. Please note that your application will not be processed until payment is received.</p>
+			<fieldset class="input-fields">
+				<label class="input-container">
+					<!--			for display error state add class "error" to input tag			-->
+					<!--			for display warm state add class "warm" to input tag			-->
+					<!--			for display success state add class "success" to input tag			-->
+					<span class="input-label">Security Consulting Experience <span>*</span></span>
+					<textarea type="text" class="input-textarea" placeholder="Text"></textarea>
+					<span class="input-message __error">Security consulting experience is required!</span>
+					<span class="input-message __warm">Warm message!</span>
+					<span class="input-message __success">Success message</span>
+					<span>Please cover the last 15 years or back to age 21, whichever is longer. List chronologically, starting with the most recent. Provide Company Name/Location, Position(s) Held, and From/To Dates.</span>
+				</label>
+				<label class="input-container">
+					<!--			for display error state add class "error" to input tag			-->
+					<!--			for display warm state add class "warm" to input tag			-->
+					<!--			for display success state add class "success" to input tag			-->
+					<span class="input-label">Non-Consulting Security Experience</span>
+					<textarea type="text" class="input-textarea" placeholder="Text"></textarea>
+					<span class="input-message __error">Non-Consulting security experience is required!</span>
+					<span class="input-message __warm">Warm message!</span>
+					<span class="input-message __success">Success message</span>
+					<span>Please cover the last 15 years or back to age 21, whichever is longer. List chronologically, starting with the most recent. Provide Company Name/Location, Position(s) Held, and From/To Dates.</span>
+				</label>
+				<label class="input-container">
+					<span class="input-label">Upload your Resume/C.C. <span>*</span></span>
+					<input type="file" class="input-file" />
+					<span class="input-draggzone">
+						<span class="input-draggzone-title">
+							@@include('../../icons/upload.html', {})
+							Add file
+						</span>
+						<span class="input-draggzone-filename"></span>
+					</span>
+				</label>
+			</fieldset>
+		</div>
+	</div>
+</section>

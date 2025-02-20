@@ -1,0 +1,23 @@
+.section-application-plate{
+	background-color: var(--color-gray-7);
+	border-radius: 32px;
+	padding: 48rem;
+	margin: 32rem 0 64rem;
+	color: var(--color-gray-3);
+	font: var(--font-body-s-regular);
+	
+		.input{
+				&-fields{
+					display: flex;
+					flex-direction: column;
+					gap: 24rem;
+				}
+		}
+	
+		fieldset{
+			padding: 8rem 0;
+			display: flex;
+			flex-direction: column;
+			gap: 9rem;
+		}
+}
