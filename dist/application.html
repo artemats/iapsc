@@ -919,7 +919,7 @@
 		<div class="section-application-plate">
 			<h3>Payment options</h3>
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-6 col-lg-4">
 					<div class="fieldset-detail">
 						<p>Preferred Mailing Address <span>*</span></p>
 					</div>
@@ -936,7 +936,7 @@
 						</label>
 					</div>
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-6 col-lg-8">
 					<div class="fieldset-detail">
 						<p>Amount Due</p>
 					</div>
@@ -952,6 +952,12 @@
 			<div class="radio-switcher">
 				<div class="radio-switcher-item" data-switch-id="payment-type-0">
 					<h3>Credit card</h3>
+					<div class="payment-icons">
+						<picture><source srcset="/img/icons/Visa.webp" type="image/webp"><img src="/img/icons/Visa.png" alt="Visa" /></picture>
+						<picture><source srcset="/img/icons/Mastercard.webp" type="image/webp"><img src="/img/icons/Mastercard.png" alt="Mastercard" /></picture>
+						<picture><source srcset="/img/icons/Discover.webp" type="image/webp"><img src="/img/icons/Discover.png" alt="Discover" /></picture>
+						<picture><source srcset="/img/icons/Amex.webp" type="image/webp"><img src="/img/icons/Amex.png" alt="Amex" /></picture>
+					</div>
 					<div class="input-fields mb-32">
 						<div class="row">
 							<div class="col-md-6">
@@ -1159,9 +1165,18 @@
 				</div>
 				<div class="radio-switcher-item" data-switch-id="payment-type-1"></div>
 			</div>
+			<!--		add class loading to btn to display animated spinner while form is submitting		-->
 			<button class="btn btn-lg w-full mt-32">
+				<span class="btn-icon loading">
+						<img src="img/spinner.svg" alt="Loading...">
+					</span>
 				<span class="btn-label">Review your contribution</span>
 			</button>
+			<!--		add class active to message to display message		-->
+			<div class="message message-success">
+				<img src="img/icons/success.svg" alt="Success" />
+				<p>Your account has been created successfully!</p>
+			</div>
 		</div>
 	</div>
 </section>
