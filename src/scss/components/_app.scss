@@ -136,8 +136,18 @@
 					gap: 16rem;
 				}
 			
-				.input-container-radio{
-					width: auto;
+				.input-container{
+						&-radio{
+							width: auto;
+						}
+						&-radios{
+							flex-direction: row;
+							column-gap: 70rem;
+							
+								@include mixins.maxWidth(variables.$sm){
+									flex-direction: column;
+								}
+						}
 				}
 		}
 }
@@ -161,6 +171,32 @@
 			height: 25rem;
 			object-fit: contain;
 			object-position: center;
+		}
+}
+
+[class$="tip"]{
+	display: inline-block;
+	font: var(--font-bosy-xxs-regular);
+}
+
+[class$="not-valid-tip"]{
+	color: var(--color-system-error);
+}
+
+[class$="response-output"]{
+	font: var(--font-body-s-regular);
+	border-radius: 4rem;
+	padding: 6rem 24rem 4rem !important;
+	margin: 10rem 48rem !important;
+	max-width: 1344rem;
+	
+		@media (min-width: 1500px) {
+			max-width: 1400rem;
+			margin: 10rem auto !important;
+		}
+	
+		@include mixins.maxWidth(variables.$sm){
+			margin: 10rem 16rem !important;
 		}
 }
 

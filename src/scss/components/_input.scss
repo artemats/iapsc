@@ -56,6 +56,16 @@
 						}
 				}
 			
+				&-radios{
+					display: flex;
+					flex-direction: column;
+					gap: 8rem;
+					
+						@include mixins.maxWidth(variables.$sm){
+							gap: 16rem;
+						}
+				}
+			
 				&.disabled{
 					pointer-events: none;
 					color: var(--color-gray-5);
@@ -292,6 +302,7 @@
 			left: 0;
 			width: 0;
 			height: 0;
+			opacity: 0;
 		}
 	
 		&-draggzone{
@@ -417,6 +428,112 @@
 			
 				span{
 					color: var(--color-secondary);
+				}
+		}
+}
+
+[class$="form-control-wrap"]{
+		[type="radio"],
+		[type="checkbox"]{
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			
+			&:checked ~ [class$="-label"]{
+				
+				&:before{
+					border-color: var(--color-primary);
+				}
+				&:after{
+					opacity: 1;
+				}
+			}
+		}
+	
+		[class$="-item first"],
+		[class$="-item"],
+		[class$="-item last"],{
+			
+			& > label{
+				display: inline-block;
+				position: relative;
+				
+					@include mixins.hover(variables.$md){
+						&:hover{
+							cursor: pointer;
+						}
+					}
+			}
+		}
+	
+		input[type="radio"] ~ [class$="-label"]{
+			display: inline-block;
+			padding-left: 40rem;
+			position: relative;
+			
+				&:before{
+					content: '';
+					position: absolute;
+					top: 3rem;
+					left: 0;
+					width: 16rem;
+					height: 16rem;
+					min-width: 16rem;
+					border: 1rem var(--color-gray-4) solid;
+					border-radius: 50%;
+					background-color: transparent;
+					pointer-events: none;
+					transition: border-color var(--duration) var(--ease);
+				}
+				
+				&:after{
+					content: '';
+					position: absolute;
+					top: 6rem;
+					left: 3rem;
+					width: 10rem;
+					height: 10rem;
+					min-width: 10rem;
+					border-radius: 50%;
+					background-color: var(--color-primary);
+					transition: opacity var(--duration) var(--ease);
+					opacity: 0;
+				}
+		}
+	
+		input[type="checkbox"] ~ [class$="-label"]{
+			display: inline-block;
+			padding-left: 40rem;
+			position: relative;
+			
+				&:before{
+					content: '';
+					position: absolute;
+					top: -1rem;
+					left: 0;
+					width: 24rem;
+					height: 24rem;
+					min-width: 24rem;
+					border: 2rem var(--color-gray-4) solid;
+					border-radius: 2px;
+				}
+			
+				&:after{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 24rem;
+					height: 24rem;
+					min-width: 24rem;
+					background-repeat: no-repeat;
+					background-size: 16rem 12rem;
+					background-position: center;
+					background-image: url(../img/icons/check.svg);
+					background-color: var(--color-primary);
+					opacity: 0;
+					transition: opacity var(--duration) var(--ease);
 				}
 		}
 }
