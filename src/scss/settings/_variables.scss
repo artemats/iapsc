@@ -47,8 +47,10 @@ $xl: 1400;
 	--font-link: 500 18rem / 135% var(--font-family-primary-medium);
 	
 	/* Colors */
-	--color-primary:                                  #003A78;
-	--color-secondary:                                #135AA7;
+	//--color-primary:                                  #003A78;
+	--color-primary:                                  #0D1843;
+	//--color-secondary:                                #135AA7;
+	--color-secondary:                                #012F60;
 	--color-primary-light:                            #5394DA;
 	--color-black:                                    #0B1720;
 	--color-gray-1:                                   #1E2730;
@@ -61,7 +63,8 @@ $xl: 1400;
 	--color-white:                                    #FFFFFF;
 	
 	--color-system-error:                             #CB0A21;
-	--color-system-warm:                              #F27502;
+	//--color-system-warm:                              #F27502;
+	--color-system-warm:                              #E7661E;
 	--color-system-success:                           #2BAC47;
 	
 	/* Transition */

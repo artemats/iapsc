@@ -8,6 +8,7 @@
 @use "components";
 @use "sections";
 @use "pages";
+@use "crm";
 
 html {
 	font-size: calc(100vw / 1440);
