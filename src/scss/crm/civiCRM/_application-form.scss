@@ -105,6 +105,13 @@
 			
 				label{
 					font-weight: initial;
+					
+						&.alert-danger{
+							background-color: transparent !important;
+							color: var(--color-system-error) !important;
+							display: inline-block;
+							margin-top: 2rem;
+						}
 				}
 			
 				input{
@@ -184,6 +191,11 @@
 							&:-moz-placeholder {
 								color: var(--color-gray-2);
 							}
+						}
+					
+						&.crm-inline-error{
+							border-color: var(--color-system-error) !important;
+							background-color: var(--color-white) !important;
 						}
 				}
 			
