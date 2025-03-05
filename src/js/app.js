@@ -6,14 +6,16 @@ import {initAccordion} from './modules/accordion/initAccordion.js';
 import {initFileDraggable} from './modules/form/initFileDraggable.js';
 import {initRadioSwitcher} from './modules/switch/initRadioSwitcher.js';
 import {removeEmptySpace} from './modules/form/removeEmptySpace.js';
+import {initPartnersMoving} from './carousels/partnersCarousel.js';
 
 toggleBurger();
 initFadeSwitcher();
-setTimeout(() => initAccordion(), 0);
-setTimeout(() => initLinkedinCarousel(), 0);
-setTimeout(() => initFileDraggable(), 0);
-setTimeout(() => initRadioSwitcher(), 0);
-setTimeout(() => removeEmptySpace(), 0);
+initPartnersMoving();
+initAccordion();
+initLinkedinCarousel();
+initFileDraggable();
+initRadioSwitcher();
+removeEmptySpace();
 
 window.addEventListener('scroll', () => {
 	if (window.innerWidth < 992) {

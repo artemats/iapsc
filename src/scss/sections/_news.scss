@@ -2,7 +2,7 @@
 @use "../settings/variables";
 
 .home-news{
-	padding: 96px 0 161rem;
+	padding: 96px 0;
 	
 		@include mixins.maxWidth(variables.$sm){
 			padding: 48rem 0;

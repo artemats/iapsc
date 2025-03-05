@@ -1,0 +1,45 @@
+@use "../settings/mixins";
+@use "../settings/variables";
+
+.partners{
+	background-color: var(--color-gray-7);
+	padding: 96rem 0;
+	
+		@include mixins.maxWidth(variables.$sm){
+			padding: 48rem 0;
+		}
+	
+		&-carousel{
+			margin-top: 64rem;
+			text-align: center;
+			
+				&-list{
+					display: inline-block;
+					white-space: nowrap;
+					will-change: transform;
+					
+						@include mixins.maxWidth(variables.$sm){
+							display: flex;
+							flex-direction: row;
+							flex-wrap: wrap;
+							white-space: normal;
+							column-gap: 24rem;
+							row-gap: 40rem;
+						}
+				}
+			
+				&-item{
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					height: 32rem;
+					width: 168rem;
+				}
+		}
+	
+		.section{
+			&-title{
+				text-align: center;
+			}
+		}
+}
