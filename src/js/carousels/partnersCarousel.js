@@ -1,9 +1,15 @@
 export const initPartnersMoving = () => {
 	const carousel = document.querySelector('#partners-carousel');
+	
+	if (!carousel || window.innerWidth < 768) return null
+	
 	const list = carousel.querySelector('.partners-carousel-list');
+	
+	if (!list) return null
+	
 	const items = list.querySelectorAll('.partners-carousel-item');
 	
-	if (!carousel || !list || !items.length || window.innerWidth < 768) return null;
+	if (!items.length) return null;
 	
 	items.forEach(item => {
 		const clone = item.cloneNode(true);

@@ -8,8 +8,8 @@
 	text-align: center;
 	font: var(--font-button);
 	text-decoration: none;
-	border: 2rem var(--color-primary) solid;
-	background-color: var(--color-primary);
+	border: 2rem var(--color-primary-orange) solid;
+	background-color: var(--color-primary-orange);
 	padding: 0 14rem;
 	height: 40rem;
 	line-height: 38rem;
@@ -23,8 +23,8 @@
 		@include mixins.hover(variables.$md){
 			&:hover{
 				cursor: pointer;
-				background-color: var(--color-secondary);
-				border-color: var(--color-secondary);
+				background-color: var(--color-primary-orange-hover);
+				border-color: var(--color-primary-orange-hover);
 			}
 		}
 	
@@ -45,14 +45,14 @@
 		// variants
 		&-outline{
 			background-color: transparent;
-			color: var(--color-primary);
+			color: var(--color-primary-orange);
 			
 				@include mixins.hover(variables.$md){
 					&:hover{
 						cursor: pointer;
-						color: var(--color-secondary);
+						color: var(--color-primary-orange-hover);
 						background-color: transparent;
-						border-color: var(--color-secondary);
+						border-color: var(--color-primary-orange-hover);
 					}
 				}
 			
@@ -125,7 +125,7 @@
 						@include mixins.hover(variables.$md){
 							&:hover{
 								cursor: pointer;
-								color: var(--color-secondary);
+								color: var(--color-primary-orange-hover);
 							}
 						}
 				}

@@ -10,11 +10,11 @@
 		@include mixins.hover(variables.$md){
 			&:hover{
 				cursor: pointer;
-				color: var(--color-secondary);
+				color: var(--color-primary-orange);
 			}
 		}
 	
 		&.active{
-			color: var(--color-secondary);
+			color: var(--color-primary-orange);
 		}
 }
